@@ -1,7 +1,7 @@
 # LiquidVassel
 Software to manage vessels and containers
 
-The goal of this software is to manage vessels which carry containers from port to port following predefinded routes, which can be modified in case of need. 
+The goal of this software is to manage vessels which carry containers from port to port following predefined routes, which can be modified in case of need. 
 
 ## OS Environment
 LiquidVassel runs on Microsoft Windows since vista to Windows 10. 
