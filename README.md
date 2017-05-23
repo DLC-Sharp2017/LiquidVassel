@@ -1,5 +1,5 @@
 # LiquidVassel
-Software to manage vassels and containers
+Software to manage vessels and containers
 
 The goal of this software is to manage vassels which carry containers from port to port following predefinded routes, which can be modified in case of need. 
 
