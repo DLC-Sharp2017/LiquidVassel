@@ -1,9 +1,9 @@
-﻿<Window x:Class="tacheMK.MainWindow"
+﻿<Window x:Class="LiquidVassel.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:tacheMK"
+        xmlns:local="clr-namespace:LiquidVassel"
         mc:Ignorable="d"
         Title="VueNavire" Height="350" Width="525">
     <Grid>
@@ -27,7 +27,7 @@
             <ColumnDefinition Width="7*"/>
             <ColumnDefinition Width="172*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="listBox_Copy4" Height="40" Margin="22,0,43,0" VerticalAlignment="Top" Grid.Column="6" RenderTransformOrigin="1.087,0.794" SelectionChanged="listBox_Copy4_SelectionChanged" Grid.Row="1" Grid.RowSpan="3"/>
+        <ListBox x:Name="listBox_Copy4" Height="40" Margin="22,0,43,0" VerticalAlignment="Top" Grid.Column="6" RenderTransformOrigin="1.087,0.794"  Grid.Row="1" Grid.RowSpan="3"/>
         <Button x:Name="modifié" Content="~" HorizontalAlignment="Left" Margin="146,1,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="-0.001,0.347" Grid.Column="6" Height="22" Grid.Row="2"/>
         <Label x:Name="label" Content="Caractéristiques navire" Grid.Column="1" HorizontalAlignment="Left" Margin="3,25,0,0" VerticalAlignment="Top" Height="26" Width="129"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="40" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Grid.Column="1" Grid.RowSpan="3"/>
