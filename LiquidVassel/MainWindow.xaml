@@ -6,12 +6,15 @@
         xmlns:local="clr-namespace:LiquidVassel"
         mc:Ignorable="d"
         Title="MainWindow" Height="750" Width="1000">
+    
+   <!-- création de 2 colonnes (droite/gauche) de valeur *-->
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-
+        
+        <!-- création de 5 lignes en multiple de *-->
         <Grid.RowDefinitions>
             <RowDefinition Height="3*" />
             <RowDefinition Height="2*" />
@@ -20,36 +23,45 @@
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
 
+        <!-- création des lignes de la colonne de gauche -->
         <Label Grid.Column="0" Grid.Row="0" Content="CHIFFRE DISPO CONTAINER" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <Label Grid.Column="0" Grid.Row="1" Content="Info NAV1" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <Label Grid.Column="0" Grid.Row="2" Content="Info NAV2" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <Label Grid.Column="0" Grid.Row="3" Content="Info NAV3" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <Label Grid.Column="0" Grid.Row="4" Content="Bouton + AJOUTER" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
+        <!--création du stackpanel 0 pour info dispo container-->
         <StackPanel Name="stack1" Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Background="Beige"  >
+            <!--creation d'un grid pour inclure cercle et info container-->
             <Grid  Margin="125,10" Height="210" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Ellipse Margin="40" Width="125" Height="125" Fill="Blue" Stroke="Black" StrokeThickness="4" VerticalAlignment="Center" />
                 <TextBlock Text="NOMBRE DE CONTAINERS DISPO" HorizontalAlignment="Center" VerticalAlignment="top"  FontSize="12" Margin="10,22,17,0"/>
                 <TextBlock  Name="nbreContainerDispo" Text="325" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" Foreground="White" />
             </Grid>
         </StackPanel>
-
+        
+        <!--création du stackpanel 1 pour inclure sur Navire (avec inclusion de 3 autres stacks)-->
         <StackPanel Name="infoNav1" Grid.Column="0" Grid.Row="1"  Orientation="Horizontal" Background="Silver" HorizontalAlignment="Center" TextBlock.Foreground="AliceBlue">
+            <!--stackpanel pour Date Départ-->
             <StackPanel Name="DateDépart" Background="Coral" Width="100" Height="200">
                 <TextBlock Name="infoDépart" Text="Date Départ" HorizontalAlignment="Center" FontSize="15" />
                 <TextBlock Name="JourDépart" Text="22" HorizontalAlignment="Center" FontSize="20"/>
                 <TextBlock Name="MoisDépart" Text="01" HorizontalAlignment="Center" FontSize="20"/>
             </StackPanel>
-            <StackPanel x:Name="DétailNavire" Background="CadetBlue" Width="300"/>
+            
+            <!--stackpanel pour info trajet navire-->
+            <StackPanel x:Name="DétailNavire" Background="CadetBlue" Width="300">
+                <TextBlock Name="infosTrajet" Text="Infos sur trajet Navire" HorizontalAlignment="Center" FontSize="20" />
+            </StackPanel>
+            
+            <!--stackpanel pour dates Escale et Arrivée-->
             <StackPanel Name="DateArrivée" Background="ForestGreen" Width="100">
                 <TextBlock Name="infoArrivée" Text="Date Arrivée" HorizontalAlignment="Center" FontSize="15" />
                 <TextBlock Name="JourArrivée" Text="28" HorizontalAlignment="Center" FontSize="20"/>
                 <TextBlock Name="MoisArrivé" Text="02" HorizontalAlignment="Center" FontSize="20"/>
             </StackPanel>
-
         </StackPanel>
 
 
     </Grid>
-
 </Window>
