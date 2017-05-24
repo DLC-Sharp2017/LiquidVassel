@@ -20,6 +20,9 @@ namespace LiquidVassel
     /// </summary>
     public partial class MainWindow : Window
     {
+	/// <summary>
+	/// Main
+	///</summary>
         public MainWindow()
         {
             InitializeComponent();
