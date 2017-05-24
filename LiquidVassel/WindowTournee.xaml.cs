@@ -17,14 +17,19 @@ namespace LiquidVassel
     /// <summary>
     /// Logique d'interaction pour Window1.xaml
     /// </summary>
-    public partial class Tournee : Window
+    public partial class WindowTournee : Window
     {
-        public Tournee()
+        public WindowTournee()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
         {
 
         }
