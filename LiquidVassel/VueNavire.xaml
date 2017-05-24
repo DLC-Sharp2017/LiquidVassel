@@ -31,7 +31,7 @@
         <Button x:Name="modifié" Content="~" HorizontalAlignment="Left" Margin="146,1,0,0" VerticalAlignment="Top" Width="16" RenderTransformOrigin="-0.001,0.347" Grid.Column="6" Height="22" Grid.Row="2"/>
         <Label x:Name="label" Content="Caractéristiques navire" Grid.Column="1" HorizontalAlignment="Left" Margin="3,25,0,0" VerticalAlignment="Top" Height="26" Width="129"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="40" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Grid.Column="1" Grid.RowSpan="3"/>
-        <TextBox x:Name="textBox_Copy" Grid.Column="1" Height="49" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,0,2,0"/>
+        <TextBox x:Name="textBox_Copy" Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" Margin="0,0,4,40" Grid.RowSpan="2"/>
         <TextBox x:Name="textBox_Copy1" Grid.Column="1" HorizontalAlignment="Left" Height="42" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" Margin="1,0,0,0" RenderTransformOrigin="0.523,0.662"/>
         <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Height="49" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Margin="2,50,0,0" Grid.RowSpan="2" Grid.Column="1"/>
         <TextBox x:Name="textBox_Copy3" Grid.Column="1" HorizontalAlignment="Left" Height="45" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="132"/>
