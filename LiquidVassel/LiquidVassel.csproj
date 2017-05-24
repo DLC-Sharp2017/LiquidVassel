@@ -93,6 +93,9 @@
     <Compile Include="Type_Iso.cs" />
     <Compile Include="VesselModel.cs" />
     <Compile Include="Ville.cs" />
+    <Compile Include="VueDashboard.xaml.cs">
+      <DependentUpon>VueDashboard.xaml</DependentUpon>
+    </Compile>
     <Page Include="LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -105,6 +108,10 @@
       <DependentUpon>LoginWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="VueDashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
