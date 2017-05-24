@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="VueAnomalie.xaml.cs">
+      <DependentUpon>VueAnomalie.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VueNavire.xaml.cs">
       <DependentUpon>VueNavire.xaml</DependentUpon>
     </Compile>
@@ -62,6 +65,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="VueAnomalie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VueNavire.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
