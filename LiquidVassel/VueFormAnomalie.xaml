@@ -1,0 +1,42 @@
+﻿<Window x:Class="LiquidVassel.VueAnomalie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LiquidVassel"
+        mc:Ignorable="d"
+        Title="VueAnomalie" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="205*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
+        <RadioButton x:Name="radioButton" Content="RadioButton" Grid.Column="4" HorizontalAlignment="Left" Margin="18,33,0,0" VerticalAlignment="Top" Height="16" Width="15" Grid.RowSpan="3"/>
+        <RadioButton x:Name="radioButton_Copy" Content="RadioButton" Grid.Column="5" HorizontalAlignment="Left" Margin="25,33,0,0" VerticalAlignment="Top" Height="16" Width="15" RenderTransformOrigin="2.81,0.484" Grid.RowSpan="3"/>
+        <RadioButton x:Name="radioButton_Copy1" Content="RadioButton" Grid.Column="6" HorizontalAlignment="Left" Margin="19,33,0,0" VerticalAlignment="Top" Height="16" Width="15" RenderTransformOrigin="0.71,-0.101" Grid.RowSpan="3"/>
+        <Label x:Name="label" Content="Bateau" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" Margin="0,10,0,0" Grid.Row="1" Grid.RowSpan="3" Height="28" Width="54"/>
+        <Label x:Name="label_Copy" Content="Contenaire" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="5" Margin="0,10,0,0" Grid.Row="1" Grid.RowSpan="3" Height="28" Width="66"/>
+        <Label x:Name="label_Copy1" Content="Terminale" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="6" Margin="0,10,-1,0" Grid.Row="1" Grid.RowSpan="3" Height="28" Width="54"/>
+        <Label x:Name="label_Copy2" Content="Anomalie " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Row="1" Grid.RowSpan="3" Height="28" Width="78" Grid.Column="2"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="100" Margin="1.831,22,0,0" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <ListBox x:Name="listBox_Copy" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="100" Margin="1.831,73,0,0" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <ListBox x:Name="listBox_Copy1" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="100" Margin="1.831,116,0,0" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Height="22" Margin="1.831,163,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label x:Name="label1" Content="       Détails" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.882,2.129" Grid.Row="3" Width="110" Grid.ColumnSpan="3" Height="26"/>
+        <Label x:Name="label1_Copy" Content="Date Debut" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.882,2.129" Grid.Row="3" Width="110" Margin="16.831,54,0,0" Grid.ColumnSpan="4" Height="26" Grid.Column="1"/>
+        <Label x:Name="label1_Copy1" Content="Date Fin" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.882,2.129" Grid.Row="3" Width="110" Margin="16.831,95,0,0" Grid.ColumnSpan="4" Height="26" Grid.Column="1"/>
+        <Label x:Name="label1_Copy2" Content="Categories" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.882,2.129" Grid.Row="3" Width="110" Margin="17,138,0,0" Grid.ColumnSpan="4" Height="26" Grid.Column="1"/>
+
+    </Grid>
+</Window>
