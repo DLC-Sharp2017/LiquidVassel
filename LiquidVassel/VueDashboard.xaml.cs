@@ -10,20 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace LiquidVassel
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour VueDashboard.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VueDashboard : Window
     {
-	/// <summary>
-	/// Main
-	///</summary>
-        public MainWindow()
+        public VueDashboard()
         {
             InitializeComponent();
         }
