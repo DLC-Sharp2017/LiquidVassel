@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LiquidVassel"
         mc:Ignorable="d"
         Title="VueAnomalie" Height="300" Width="300">
-    <Grid>
+    <Grid Margin="0,0,2,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="34*"/>
             <RowDefinition Height="14*"/>
@@ -29,14 +29,14 @@
         <Label x:Name="label_Copy" Content="Contenaire" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="5" Margin="0,10,0,0" Grid.Row="1" Grid.RowSpan="3" Height="28" Width="66"/>
         <Label x:Name="label_Copy1" Content="Terminale" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="6" Margin="0,10,-1,0" Grid.Row="1" Grid.RowSpan="3" Height="28" Width="54"/>
         <Label x:Name="label_Copy2" Content="Anomalie " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" Grid.Row="1" Grid.RowSpan="3" Height="28" Width="78" Grid.Column="2"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="100" Margin="1.831,22,0,0" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <ListBox x:Name="listBox_Copy" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="100" Margin="1.831,73,0,0" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <ListBox x:Name="listBox_Copy1" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="100" Margin="1.831,116,0,0" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Height="22" Margin="1.831,163,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <Label x:Name="label1" Content="       Détails" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.882,2.129" Grid.Row="3" Width="110" Grid.ColumnSpan="3" Height="26"/>
-        <Label x:Name="label1_Copy" Content="Date Debut" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.882,2.129" Grid.Row="3" Width="110" Margin="16.831,54,0,0" Grid.ColumnSpan="4" Height="26" Grid.Column="1"/>
-        <Label x:Name="label1_Copy1" Content="Date Fin" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.882,2.129" Grid.Row="3" Width="110" Margin="16.831,95,0,0" Grid.ColumnSpan="4" Height="26" Grid.Column="1"/>
-        <Label x:Name="label1_Copy2" Content="Categories" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.882,2.129" Grid.Row="3" Width="110" Margin="17,138,0,0" Grid.ColumnSpan="4" Height="26" Grid.Column="1"/>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Height="22" Margin="2,173,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label x:Name="label1_Copy" Content="Date Debut" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.882,2.129" Grid.Row="3" Width="93" Margin="17,39,0,0" Grid.ColumnSpan="3" Height="28" Grid.Column="1"/>
+        <Label x:Name="label1_Copy1" Content="Date Fin" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.882,2.129" Grid.Row="3" Width="93" Margin="17,95,0,0" Grid.ColumnSpan="3" Height="26" Grid.Column="1"/>
+        <Label x:Name="label1_Copy2" Content="Categories" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.882,2.129" Grid.Row="3" Width="93" Margin="17,147,0,0" Grid.ColumnSpan="3" Height="26" Grid.Column="1"/>
+        <TextBox x:Name="textBox2" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="2,74,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
+        <TextBox x:Name="textBox2_Copy" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="2,121,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
+        <TextBox x:Name="textBox2_Copy1" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="2,10,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
+        <Button x:Name="button" Grid.ColumnSpan="2" Content="Save" Grid.Column="5" HorizontalAlignment="Left" Height="29" Margin="24,166,0,0" Grid.Row="3" VerticalAlignment="Top" Width="85"/>
 
     </Grid>
 </Window>
