@@ -38,7 +38,7 @@
 
     <Reference Include="Microsoft.Maps.MapControl.WPF">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Bing Maps WPF Control\V1\Libraries\Microsoft.Maps.MapControl.WPF.dll</HintPath>
-
+ </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -73,6 +73,7 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -84,6 +85,7 @@
       <DependentUpon>WindowTournee.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
+    </Page>
 
     <Compile Include="AnomalieB.cs" />
     <Compile Include="Armateur.cs" />
@@ -122,6 +124,7 @@
     </Compile>
 
     <Page Include="WindowTournee.xaml">
+    </Page>
 
     <Page Include="VueDashboard.xaml">
 
