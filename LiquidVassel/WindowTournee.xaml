@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         xmlns:local="clr-namespace:LiquidVassel"
         mc:Ignorable="d"
-     Title="WindowTournée" Height="411" Width="489"
+     Title="WindowTournée" Height="750" Width="1000"
         ResizeMode="CanResize">
     <Window.Resources>
 
@@ -48,25 +49,30 @@
     </Window.Resources>
 
 
-    <Grid Margin="10,0,-8,0" Height="381" VerticalAlignment="Top">
+    <Grid Margin="10,0,-8,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="198"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="171"/>
+            <RowDefinition Height="350"/>
         </Grid.RowDefinitions>
 
-        <StackPanel HorizontalAlignment="Left" Width="570" Orientation="Horizontal" Margin="16,116,-107,49">
+        <StackPanel HorizontalAlignment="Center" Width="Auto" Orientation="Horizontal" Margin="426,116,435,49">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Label}">
-                    <Setter Property="Margin" Value="0,0,0,10"/>
+
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
                 </Style>
             </StackPanel.Resources>
-            <Label x:Name="label" Content="TKO" Background="AliceBlue"   Style="{StaticResource LabelStyle}" Margin="0,0,10,10"/>
+            <StackPanel.Background>
+                <ImageBrush/>
+            </StackPanel.Background>
+            <Label x:Name="label" Content="TKO" Background="AliceBlue"   Style="{StaticResource LabelStyle}"  Margin="0,0,10,10"/>
             <Label x:Name="label1" Content="MSL" Background="Gainsboro"   Style="{StaticResource LabelStyle}" Margin="0,0,10,10" />
             <Label x:Name="label2" Content="SGP" Background="Gold"  Style="{StaticResource LabelStyle}" Margin="0,0,10,10" />
             <Label x:Name="label3" Content="NYK" Background="Linen"   Style="{StaticResource LabelStyle}" Margin="0,0,10,10"/>
 
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="23" Margin="16,155,-107,0" VerticalAlignment="Top" Width="570"
+        <StackPanel HorizontalAlignment="Center" Height="23" Margin="439,155,423,0" VerticalAlignment="Top" Width="Auto"
                     Orientation="Horizontal">
 
             <StackPanel.Resources>
@@ -83,41 +89,58 @@
 
 
         </StackPanel>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="82" Margin="97,9,0,0" Stroke="Black" VerticalAlignment="Top" Width="260"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="113,35,0,0" VerticalAlignment="Top" Width="39" Style="{StaticResource ButtonStyle}" Height="40" Click="button_Click"/>
-        <Button x:Name="button4" Content="Button" HorizontalAlignment="Left" Margin="300,35,0,0" VerticalAlignment="Top" Width="39" Style="{StaticResource ButtonStyle}" Height="40"/>
-        <StackPanel HorizontalAlignment="Left" Height="151" Margin="10,10,0,-54" Grid.Row="1" VerticalAlignment="Top" Width="119">
+        <StackPanel HorizontalAlignment="Left" Height="151" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="119">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type TextBox}">
                     <Setter Property="Margin" Value="0,0,0,20"/>
                     <Setter Property="FontWeight" Value="Bold"/>
                 </Style>
             </StackPanel.Resources>
-            <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="TextBlock" Margin="0,0,0,15"/>
-            <TextBlock x:Name="textBlock3" TextWrapping="Wrap" Text="TextBlock" Margin="0,0,0,15"/>
-            <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Text="TextBlock" Margin="0,0,0,15"/>
-            <TextBlock x:Name="textBlock5" TextWrapping="Wrap" Text="TextBlock" Margin="0,0,0,15"/>
+            <TextBox x:Name="textBox" Height="23" Margin="0,0,0,15" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name="textBox1" Height="23" Margin="0,0,0,15" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name="textBox2" Height="23" Margin="0,0,0,15" TextWrapping="Wrap" Text="TextBox"/>
+            <TextBox x:Name="textBox7" Height="23" Margin="0" TextWrapping="Wrap" Text="TextBox" RenderTransformOrigin="0.504,1.826"/>
         </StackPanel>
 
-        <StackPanel HorizontalAlignment="Left" Height="151" Margin="134,10,0,-30" Grid.Row="1" VerticalAlignment="Top" Width="100">
+        <StackPanel HorizontalAlignment="Left" Height="151" Margin="134,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100">
 
             <Button x:Name="button1" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
             <Button x:Name="button2" Content="Button" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}" Margin="37.5,0,37.5,15"  Height="25" Width="25"/>
             <Button x:Name="button3" Content="Button" Style="{StaticResource ButtonStyle}" Height="25" Margin="37.5,0,37.5,15"/>
+            <Button x:Name="button3_Copy" Content="Button" Style="{StaticResource ButtonStyle}" Height="25" Margin="37.5,0,37.5,15"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="129" Margin="239,10,0,-9" Grid.Row="1" VerticalAlignment="Top" Width="100">
+        <StackPanel HorizontalAlignment="Left" Height="151" Margin="239,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100">
             <Button x:Name="button1_Copy" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
             <Button x:Name="button1_Copy1" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
             <Button x:Name="button1_Copy2" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
+            <Button x:Name="button3_Copy1" Content="Button" Style="{StaticResource ButtonStyle}" Height="25" Margin="37.5,0,37.5,15"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="129" Margin="344,10,0,-11" Grid.Row="1" VerticalAlignment="Top" Width="100">
+        <StackPanel HorizontalAlignment="Left" Height="151" Margin="344,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100">
             <Button x:Name="button1_Copy3" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
             <Button x:Name="button1_Copy4" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
             <Button x:Name="button1_Copy5" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
+            <Button x:Name="button3_Copy2" Content="Button" Style="{StaticResource ButtonStyle}" Height="25" Margin="37.5,0,37.5,15"/>
         </StackPanel>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="195,22,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="195,59,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-
+        <m:Map CredentialsProvider="+Aq6WoV95XC-dVCpVKp06ThBgixXxiF_RuyuXLRRWuKPrwkBWOrfPPRayBpPNOB_O
+" RenderTransformOrigin="0.5,0.5"
+               x:Name="carteTournee" Mode="Road" Grid.Row="2" Margin="180,0,280,30" ZoomLevel="5">
+      
+        <m:Map.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.074"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.332"/>
+                </TransformGroup>
+            </m:Map.RenderTransform>
+            
+        </m:Map>
+        <Canvas HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Top" Width="Auto" Margin="495,0" >
+            <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="39" Style="{StaticResource ButtonStyle}" Height="40" Click="button_Click" Canvas.Left="38" Canvas.Top="30"/>
+            <Button x:Name="button4" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="39" Style="{StaticResource ButtonStyle}" Height="40" Canvas.Left="225" Canvas.Top="30"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Canvas.Left="120" Canvas.Top="17"/>
+            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Canvas.Left="120" Canvas.Top="54"/>
+        </Canvas>
     </Grid>
 </Window>
 

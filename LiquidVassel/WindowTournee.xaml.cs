@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.Maps.MapControl.WPF;
 
 namespace LiquidVassel
 {
@@ -22,6 +23,11 @@ namespace LiquidVassel
         public WindowTournee()
         {
             InitializeComponent();
+
+            carteTournee.Center = new Location(47.6421, -122.1420);
+             
+
+
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
