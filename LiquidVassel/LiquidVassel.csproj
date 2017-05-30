@@ -58,8 +58,10 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -81,8 +83,6 @@
     <Compile Include="WindowTournee.xaml.cs">
       <DependentUpon>WindowTournee.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-    </Page>
     <Compile Include="AnomalieB.cs" />
     <Compile Include="Armateur.cs" />
     <Compile Include="Bateau.cs" />
@@ -105,6 +105,12 @@
     <Compile Include="Type_Iso.cs" />
     <Compile Include="VesselModel.cs" />
     <Compile Include="Ville.cs" />
+    <Compile Include="VueFormAnomalie3.xaml.cs">
+      <DependentUpon>VueFormAnomalie3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VueNavire3.xaml.cs">
+      <DependentUpon>VueNavire3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VueDashboard.xaml.cs">
       <DependentUpon>VueDashboard.xaml</DependentUpon>
     </Compile>
@@ -120,6 +126,16 @@
       <DependentUpon>LoginWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="VueFormAnomalie3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VueNavire3.xaml">
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowTournee.xaml">
     </Page>
     <Page Include="VueDashboard.xaml">
@@ -145,7 +161,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
