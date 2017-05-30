@@ -40,12 +40,12 @@ namespace LiquidVassel
                                   where login == ar.LoginArma
                                   where passWord == ar.Motdepassearma
                                   select ar).ToList();
-                //MessageBox.Show(loginQuery.Count.ToString());
+                
                 if (loginQuery.Count==1)
                 {
                     MessageBox.Show("Vous êtes connecté!");
-                    Page PageLogin = new Page();
-                    this.NavigationService.Navigate(PageLogin);
+                    Page VueDashboard = new Page();
+                    this.NavigationService.Navigate(VueDashboard);
                 }
                 else
                 {
