@@ -18,26 +18,44 @@ namespace LiquidVassel
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginWindow : Page
     {
 	/// <summary>
-	/// Main
+	/// Verification Connection 
 	///</summary>
-        public MainWindow()
+        public LoginWindow()
         {
             InitializeComponent();
         }
 
         private void btnSign_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Connecté");
-            //using (var connect = new LoginModel())
-            //{
+            using (var connect = new VesselModel())
+            {
+                string login = txtId.Text;
+                string passWord = pswPassword.Password;
+                
 
-            //}
+                var loginQuery = (from ar in connect.Armateurs
+                                  where login == ar.LoginArma
+                                  where passWord == ar.Motdepassearma
+                                  select ar).ToList();
+                //MessageBox.Show(loginQuery.Count.ToString());
+                if (loginQuery.Count==1)
+                {
+                    MessageBox.Show("Vous êtes connecté!");
+                    Page PageLogin = new Page();
+                    this.NavigationService.Navigate(PageLogin);
+                }
+                else
+                {
+                    MessageBox.Show("You shall not pass !");
+                }
+            }
         }
 
         /// <summary>
+        /// Bouton Exit
         /// Méthode close() appli
         /// </summary>
         /// <param name="sender"></param>
@@ -47,12 +65,17 @@ namespace LiquidVassel
             MessageBoxResult msgSortie = MessageBox.Show("Are you sure ?", "Exit", MessageBoxButton.YesNoCancel);
             if (msgSortie == MessageBoxResult.Yes)
             {
-                this.Close();
+                //this.Close();
             }
         }
 
 
-    }
+
+       
+            }
+
+        
+        }
 
 
-}
+   
