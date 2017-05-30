@@ -11,13 +11,15 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient; 
+
 
 namespace LiquidVassel
 {
     /// <summary>
     /// Logique d'interaction pour VueNavire3.xaml
     /// </summary>
-    public partial class VueNavire3 : Window
+    public partial class VueNavire3 : Page
     {
         public VueNavire3()
         {
@@ -50,8 +52,9 @@ namespace LiquidVassel
 
         private void modifié_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("vous allez modifié une nouvelle tourné");
         }
+
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             text1.Clear();
@@ -60,15 +63,18 @@ namespace LiquidVassel
             textB2.Clear();
             textB1.Clear();
             textnom.Clear();
-
-
         }
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+         
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("vous aller ajouter une tournée");
+        }
 
+       
     }
 
 

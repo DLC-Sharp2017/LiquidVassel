@@ -54,8 +54,10 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -93,6 +95,9 @@
     <Compile Include="Type_Iso.cs" />
     <Compile Include="VesselModel.cs" />
     <Compile Include="Ville.cs" />
+    <Compile Include="VueFormAnomalie3.xaml.cs">
+      <DependentUpon>VueFormAnomalie3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VueNavire3.xaml.cs">
       <DependentUpon>VueNavire3.xaml</DependentUpon>
     </Compile>
@@ -104,14 +109,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="VueFormAnomalie.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="VueFormAnomalie3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VueNavire3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
