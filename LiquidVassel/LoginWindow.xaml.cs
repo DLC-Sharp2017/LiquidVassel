@@ -30,29 +30,46 @@ namespace LiquidVassel
 
         private void btnSign_Click(object sender, RoutedEventArgs e)
         {
-            using (var connect = new VesselModel())
+            try
             {
-                string login = txtId.Text;
-                string passWord = pswPassword.Password;
-                
 
-                var loginQuery = (from ar in connect.Armateurs
-                                  where login == ar.LoginArma
-                                  where passWord == ar.Motdepassearma
-                                  select ar).ToList();
-                
-                if (loginQuery.Count==1)
+                using (var connect = new VesselModel())
                 {
-                    MessageBox.Show("Vous êtes connecté!");
-                    Page VueDashboard = new Page();
-                    this.NavigationService.Navigate(VueDashboard);
-                }
-                else
-                {
-                    MessageBox.Show("You shall not pass !");
+
+                    string login = txtId.Text;
+                    string passWord = pswPassword.Password;
+
+
+                    var loginQuery = (from ar in connect.Armateurs
+                                      where login == ar.LoginArma
+                                      where passWord == ar.Motdepassearma
+                                      select ar).ToList();
+
+
+                    if (loginQuery.Count == 1)
+                    {
+                        MessageBox.Show("Vous êtes connecté!");
+                        Page VueDashboard = new Page();
+                        this.NavigationService.Navigate(VueDashboard);
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("You shall not pass !");
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Temps d'attente dépassé\n"+ ex.Message);
+            }
         }
+                    
+                   
+                
+                
+      
 
         /// <summary>
         /// Bouton Exit
@@ -65,7 +82,7 @@ namespace LiquidVassel
             MessageBoxResult msgSortie = MessageBox.Show("Are you sure ?", "Exit", MessageBoxButton.YesNoCancel);
             if (msgSortie == MessageBoxResult.Yes)
             {
-                //this.Close();
+               Environment.Exit(0);
             }
         }
 
