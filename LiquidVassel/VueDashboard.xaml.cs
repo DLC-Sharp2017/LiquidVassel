@@ -17,11 +17,39 @@ namespace LiquidVassel
     /// <summary>
     /// Logique d'interaction pour VueDashboard.xaml
     /// </summary>
-    public partial class VueDashboard : Window
+    public partial class VueDashboard : Page
     {
         public VueDashboard()
         {
             InitializeComponent();
+            myMap.Center = new Microsoft.Maps.MapControl.WPF.Location(57.262158, 6.741457);
         }
+
+        private void StackPanel_MouseUpBatBat(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Bateau");
+        }
+        private void StackPanel_MouseUpAno(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Anomalie");
+        }
+
+        private void ClickTournee(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Tournée");
+        }
+
+
+        //private void StackPanel_MouseUp(object sender, MouseButtonEventArgs e)
+        //{
+        //    if (sender == Bateau)
+        //    {
+        //        MessageBox.Show("Bateau");
+        //    }
+        //    if (sender == Anomalie)
+        //    {
+        //        MessageBox.Show("Anomalie");
+        //    }
+        //}
     }
 }
