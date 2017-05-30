@@ -1,75 +1,125 @@
-﻿<Window x:Class="LiquidVassel.VueDashboard"
+﻿<Page x:Class="LiquidVassel.VueDashboard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LiquidVassel"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         mc:Ignorable="d"
         Title="VueDashboard" Height="750" Width="1000">
     <StackPanel Orientation="Horizontal" >
-        <StackPanel Width="500">
-            <Label Content="325" Height="70"/>
-            <StackPanel Orientation="Horizontal">
-                <StackPanel >
-                    <Label Content="01" BorderThickness="0"/>
-                    <Label Content="04"/>
-                </StackPanel>
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Label Content="95"/>
-                </StackPanel>
-                <StackPanel>
-                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Label Content="Ginette" Width="410" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                        <Grid Width="408">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="4*"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Content="FOS" HorizontalContentAlignment="Right"/>
-                            <Label Grid.Column="1" Content="o" HorizontalContentAlignment="Center"/>
-                            <Label Grid.Column="2" Content="o" HorizontalContentAlignment="Center"/>
-                            <Label Grid.Column="3" Content="o" HorizontalContentAlignment="Center"/>
-                            <Label Grid.Column="4" Content="LH" HorizontalContentAlignment="Center"/>
-                            <Label Grid.Column="5" Content="o" HorizontalContentAlignment="Center"/>
-                            <Label Grid.Column="6" Content="o" HorizontalContentAlignment="Center"/>
-                            <Label Grid.Column="7" Content="o" HorizontalContentAlignment="Center"/>
-                            <Label Grid.Column="8" Content="SH"/>
-                        </Grid>
+        <StackPanel Width="500" Background="#FF805E8D">
+            <StackPanel>
+                <Label Content="325" Height="70" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="32"  />
+            </StackPanel>
+            <Border BorderBrush="Gray" BorderThickness="1">
+                <StackPanel x:Name="Bateau" MouseUp="StackPanel_MouseUpBatBat" Orientation="Horizontal">
+                    <StackPanel >
+                        <Label Content="01"/>
+                        <Label Content="04"/>
                     </StackPanel>
-
-
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Border CornerRadius="20" Background="Gray">
+                            <Label Content="95" Foreground="White" FontWeight="Bold"/>
+                        </Border>
+                    </StackPanel>
+                    <StackPanel Background="#FF63A2A8">
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">                           
+                            <Label Content="Ginette" Width="406" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="Transparent"/>                                                         
+                            <Grid Width="408" Background="White">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="4*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="4*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Content="FOS" HorizontalContentAlignment="Right">
+                                    <Label.Background>
+                                        <LinearGradientBrush EndPoint="1,1" MappingMode="RelativeToBoundingBox" StartPoint="0,1">
+                                            <GradientStop Color="#FF63A2A8" Offset="0.148"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Label.Background>
+                                </Label>
+                                <Label Grid.Column="1" Content="o" HorizontalContentAlignment="Center"/>
+                                <Label Grid.Column="2" Content="o" HorizontalContentAlignment="Center"/>
+                                <Label Grid.Column="3" Content="o" HorizontalContentAlignment="Center"/>
+                                <Label Grid.Column="4" Content="LH" HorizontalContentAlignment="Center"/>
+                                <Label Grid.Column="5" Content="o" HorizontalContentAlignment="Center"/>
+                                <Label Grid.Column="6" Content="o" HorizontalContentAlignment="Center"/>
+                                <Label Grid.Column="7" Content="o" HorizontalContentAlignment="Center"/>
+                                <Label Grid.Column="8" Content="SH">
+                                    <Label.Background>
+                                        <LinearGradientBrush EndPoint="0,0" StartPoint="1,1">
+                                            <GradientStop Color="#FF63A2A8" Offset="0"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Label.Background>
+                                </Label>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel >
+                        <Label Content="01"/>
+                        <Label Content="04"/>
+                    </StackPanel>
+                    <StackPanel >
+                        <Label Content="01"/>
+                        <Label Content="04"/>
+                    </StackPanel>
                 </StackPanel>
-                <StackPanel >
-                    <Label Content="01"/>
-                    <Label Content="04"/>
+            </Border>
+            <StackPanel>
+                <Button Click="ClickTournee">+</Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Width="500" Background="#FFE4CCCC">
+            <StackPanel Orientation="Horizontal" Width="500" HorizontalAlignment="Left" Background="#FF7C7E89">
+                <StackPanel HorizontalAlignment="Left" Background="White" Height="130">
+                    <StackPanel>
+                        <Label Content="ANOMALIES" Height="75" Width="440" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="32" HorizontalContentAlignment="Center" Background="#FFE0C6D6"/>
+                    </StackPanel>
+                    <Border BorderBrush="Gray" BorderThickness="1" Width="437">
+                        <StackPanel x:Name="Anomalie" Orientation="Horizontal" MouseUp="StackPanel_MouseUpAno" Width="400" HorizontalAlignment="Left">
+                            <StackPanel Background="#FF63A2A8" Width="364">
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="373">
+                                    <Label Content="Ginette" Width="350" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" Background="Transparent"/>
+                                    <StackPanel Orientation="Horizontal" Width="375">
+                                        <Label Content="FOS" MinWidth="150" HorizontalContentAlignment="Center" Foreground="White" FontWeight="Bold"/>
+                                        <Label Content="grève" MinWidth="150" HorizontalContentAlignment="Center" Foreground="White" FontWeight="Bold"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Width="30">
+                                <Label Content="01" Background="#FFEC5050" RenderTransformOrigin="0.762,0.5"/>
+                                <Label Content="04"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
                 </StackPanel>
-                <StackPanel >
-                    <Label Content="01"/>
-                    <Label Content="04"/>
+                <StackPanel Width="100" VerticalAlignment="Bottom" Background="#FF96A2E2">
+                    <StackPanel Margin="0,0,48,0">
+                        <Label Content="P" HorizontalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center"><Run Text="Port"/></TextBlock>
+                        <Label Content="B" HorizontalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center"><Run Text="Boat"/></TextBlock>
+                        <Button>+</Button>
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
-
-
-            <Grid/>
-            <Button Content="+"/>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="12*"/>
-                    <ColumnDefinition Width="7*"/>
-                </Grid.ColumnDefinitions>
-
-            </Grid>
-
-
+            <DockPanel>
+                <Grid DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Height="240" HorizontalAlignment="Right"/>
+            </DockPanel>
+            <m:Map x:Name="myMap" Mode="Road"  CredentialsProvider="Aq6WoV95XC-dVCpVKp06ThBgixXxiF_RuyuXLRRWuKPrwkBWOrfPPRayBpPNOB_O" ZoomLevel="5" VerticalContentAlignment="Bottom" Height="349" >
+                <m:Map.Center>
+                    <m:Location Latitude="24.2587453" Longitude=" 6.25689874"/>
+                </m:Map.Center>
+            </m:Map>
         </StackPanel>
-        <StackPanel/>
-
     </StackPanel>
-</Window>
+</Page>
