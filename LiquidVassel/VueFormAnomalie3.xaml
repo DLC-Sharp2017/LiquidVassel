@@ -24,7 +24,7 @@
         </Grid.ColumnDefinitions>
         <RadioButton x:Name="radioButton" Content="RadioButton" Grid.Column="4" HorizontalAlignment="Left" Margin="18,33,0,0" VerticalAlignment="Top" Height="16" Width="15" Grid.RowSpan="3"/>
         <RadioButton x:Name="radioButton_Copy" Content="RadioButton" Grid.Column="5" HorizontalAlignment="Left" Margin="25,33,0,0" VerticalAlignment="Top" Height="16" Width="15" RenderTransformOrigin="2.81,0.484" Grid.RowSpan="3"/>
-        <RadioButton x:Name="radioButton_Copy1" Content="RadioButton" Grid.Column="6" HorizontalAlignment="Left" Margin="19,33,0,0" VerticalAlignment="Top" Height="16" Width="15" RenderTransformOrigin="0.71,-0.101" Grid.RowSpan="3"/>
+        <RadioButton x:Name="radioButton_Copy1" Content="RadioButton" Grid.Column="6" HorizontalAlignment="Left" Margin="16,33,0,0" VerticalAlignment="Top" Height="16" Width="15" RenderTransformOrigin="0.71,-0.101" Grid.RowSpan="2"/>
         <Label x:Name="label" Content="Bateau" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" Margin="0,10,0,0" Grid.Row="1" Grid.RowSpan="3" Height="28" Width="54"/>
         <Label x:Name="label_Copy" Content="Contenaire" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="5" Margin="0,10,0,0" Grid.Row="1" Grid.RowSpan="3" Height="28" Width="66"/>
         <Label x:Name="label_Copy1" Content="Terminale" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="6" Margin="0,10,-1,0" Grid.Row="1" Grid.RowSpan="3" Height="28" Width="54"/>
@@ -37,6 +37,8 @@
         <TextBox x:Name="textBox2_Copy" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="2,121,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="98"/>
         <TextBox x:Name="textBox2_Copy1" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="2,10,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" TextChanged="textBox2_Copy1_TextChanged"/>
         <Button x:Name="button" Grid.ColumnSpan="2" Content="Save" Grid.Column="5" HorizontalAlignment="Left" Height="29" Margin="24,166,0,0" Grid.Row="3" VerticalAlignment="Top" Width="85"/>
+        <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="4,74,0,0" Grid.Row="3" VerticalAlignment="Top" Width="95" Grid.ColumnSpan="2" Height="28"/>
+        <DatePicker Grid.Column="1" HorizontalAlignment="Left" Margin="5,122,0,0" Grid.Row="3" VerticalAlignment="Top" Width="95" Grid.ColumnSpan="2" Height="28"/>
 
     </Grid>
 </Page>
