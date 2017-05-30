@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LiquidVassel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="1000">
+        Title="MainWindow"
+        Height="750"
+        Width="1000">
 
     <!-- création de 2 colonnes (droite/gauche) de valeur *-->
     <Grid>
@@ -23,7 +25,6 @@
             <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
 
-
         <!-- création des lignes de la colonne de gauche -->
         <!--<Label Grid.Column="0" Grid.Row="0" Content="CHIFFRE DISPO CONTAINER" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <Label Grid.Column="0" Grid.Row="1" Content="Info NAV1" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -32,86 +33,215 @@
         <Label Grid.Column="0" Grid.Row="4" Content="Bouton + AJOUTER" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
 
         <!--création du stackpanel 0 pour info dispo container-->
-        <StackPanel Name="stack1" Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Background="Gray"  >
+        <StackPanel Name="stack1"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Orientation="Horizontal"
+                    Background="Gray">
             <!--creation d'un grid pour inclure cercle et info container-->
-            <Grid  Margin="125,10" Height="210" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Ellipse Margin="40" Width="125" Height="125" Fill="Blue" Stroke="Yellow" StrokeThickness="4" VerticalAlignment="Center" />
-                <TextBlock Text="NOMBRE DE CONTAINERS DISPO" HorizontalAlignment="Center" VerticalAlignment="top"  FontSize="15" Foreground="White" Margin="10,22,17,0"/>
-                <TextBlock  Name="nbreContainerDispo" Text="325" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" Foreground="White" />
+            <Grid  Margin="125,10"
+                   Height="210"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+                <Ellipse Margin="40"
+                         Width="125"
+                         Height="125"
+                         Fill="Blue"
+                         Stroke="Yellow"
+                         StrokeThickness="4"
+                         VerticalAlignment="Center" />
+                <TextBlock Text="NOMBRE DE CONTAINERS DISPO"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="top"
+                           FontSize="15"
+                           Foreground="White"
+                           Margin="10,22,17,0" />
+                <TextBlock  Name="nbreContainerDispo"
+                            Text="325"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="50"
+                            Foreground="White" />
             </Grid>
         </StackPanel>
 
-        <Grid>
-            
-            
-            
-        </Grid>
-        
+       
+
         <!--création du stackpanel 1 pour inclure sur Navire (avec inclusion de 3 autres stacks)-->
-        <StackPanel Name="infoNav1" Grid.Column="0" Grid.Row="1"  Orientation="Horizontal" Background="Silver" Margin="0,10,0,0" HorizontalAlignment="Center" TextBlock.Foreground="AliceBlue">
+        <StackPanel Name="infoNav1"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Orientation="Horizontal"
+                    Background="Silver"
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Center"
+                    TextBlock.Foreground="AliceBlue">
             <!--stackpanel pour Date Départ-->
-            <StackPanel Name="DateDepart" Background="Coral" Width="82">
-                <StackPanel Name="dateDepart" Margin="10" />
-                <TextBlock Name="infoDépart" Text="Date Départ" HorizontalAlignment="Center" FontSize="14" />
-                <TextBlock x:Name="JourDépart" Text="22" HorizontalAlignment="Center" FontSize="20" Margin="30,0"/>
-                <TextBlock Name="MoisDépart" Text="JAN" HorizontalAlignment="Center" FontSize="20"/>
+            <StackPanel Name="DateDepart"
+                        Background="Coral"
+                        Width="82">
+                <StackPanel Name="dateDepart"
+                            Margin="10" />
+                <TextBlock Name="infoDépart"
+                           Text="Date Départ"
+                           HorizontalAlignment="Center"
+                           FontSize="14" />
+                <TextBlock x:Name="JourDépart"
+                           Text="22"
+                           HorizontalAlignment="Center"
+                           FontSize="20"
+                           Margin="30,0" />
+                <TextBlock Name="MoisDépart"
+                           Text="JAN"
+                           HorizontalAlignment="Center"
+                           FontSize="20" />
             </StackPanel>
 
-            <StackPanel Name="NbreContainer" Background="BurlyWood" Width="69">
+            <StackPanel Name="NbreContainer"
+                        Background="BurlyWood"
+                        Width="69">
                 <StackPanel>
-                    <TextBlock Name="NombreContainerDispoNavire" Text="Nbre" FontSize="12" HorizontalAlignment="Center"></TextBlock>
-                    <TextBlock Name="NombreContainerDispoNavire2" Text="Container" FontSize="12" HorizontalAlignment="Center"></TextBlock>
-                    <TextBlock Name="NombreContainerDispoNavire3" Text="Dispo" FontSize="12" HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Name="NombreContainerDispoNavire"
+                               Text="Nbre"
+                               FontSize="12"
+                               HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Name="NombreContainerDispoNavire2"
+                               Text="Container"
+                               FontSize="12"
+                               HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Name="NombreContainerDispoNavire3"
+                               Text="Dispo"
+                               FontSize="12"
+                               HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
                 <StackPanel>
-                    <Grid  Margin="12,10" Height="100" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Ellipse  Width="40" Height="40" Fill="Blue" Stroke="White" StrokeThickness="2" VerticalAlignment="Center" Margin="30,0,30,60" />
-                        <TextBlock Name="ChiffreContainerDispo" Text="120" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="38,10,37,70"></TextBlock>
+                    <Grid  Margin="12,10"
+                           Height="100"
+                           Width="100"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center">
+                        <Ellipse  Width="40"
+                                  Height="40"
+                                  Fill="Blue"
+                                  Stroke="White"
+                                  StrokeThickness="2"
+                                  VerticalAlignment="Center"
+                                  Margin="30,0,30,60" />
+                        <TextBlock Name="ChiffreContainerDispo"
+                                   Text="120"
+                                   FontSize="15"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="38,10,37,70"></TextBlock>
                     </Grid>
                 </StackPanel>
             </StackPanel>
 
             <!--stackpanel pour info trajet navire-->
-            <StackPanel x:Name="DétailNavire" Background="CadetBlue" Width="261">
-                <TextBlock Name="infosTrajet"  HorizontalAlignment="Center" FontSize="20" />
-                <StackPanel x:Name="nomnavire" Background="Brown" TextElement.Foreground="Black">
-                    <TextBlock x:Name="NomNav" Text="QUEEN MARY II"  HorizontalAlignment="Center" FontStyle="Italic" Foreground="#FFF9E8E8" FontSize="30" />
+            <StackPanel x:Name="DétailNavire"
+                        Background="CadetBlue"
+                        Width="261">
+                <TextBlock Name="infosTrajet"
+                           HorizontalAlignment="Center"
+                           FontSize="20" />
+                <StackPanel x:Name="nomnavire"
+                            Background="Brown"
+                            TextElement.Foreground="Black">
+                    <TextBlock x:Name="NomNav"
+                               Text="QUEEN MARY II"
+                               HorizontalAlignment="Center"
+                               FontStyle="Italic"
+                               Foreground="#FFF9E8E8"
+                               FontSize="30" />
                 </StackPanel>
-                <StackPanel Name="infoTrajet" Orientation="Horizontal" Margin="10" >
+                <StackPanel Name="infoTrajet"
+                            Orientation="Horizontal"
+                            Margin="10">
                     <StackPanel Name="PortDep">
-                        <TextBlock Name="portDep" Text="DEP" FontSize="15" Margin="10"></TextBlock>
+                        <TextBlock Name="portDep"
+                                   Text="DEP"
+                                   FontSize="15"
+                                   Margin="10"></TextBlock>
                     </StackPanel>
-                    <StackPanel Name="progressBar1" VerticalAlignment="Center">
-                        <ProgressBar Height="20" Width="50" Minimum="0" Maximum="100" Value="100" Background="{x:Null}"/>
-                    </StackPanel>
-                    <StackPanel >
-                        <TextBlock Name="portEsc" Text="ESC" FontSize="15" Margin="10"></TextBlock>
-                    </StackPanel>
-                    <StackPanel Name="progressBar2" VerticalAlignment="Center">
-                        <ProgressBar Height="20" Width="50" Minimum="0" Maximum="100" Value="65" Background="{x:Null}"/>
+                    <StackPanel Name="progressBar1"
+                                VerticalAlignment="Center">
+                        <ProgressBar Height="20"
+                                     Width="50"
+                                     Minimum="0"
+                                     Maximum="100"
+                                     Value="100"
+                                     Background="{x:Null}" />
                     </StackPanel>
                     <StackPanel>
-                        <TextBlock Name="portDest" Text="DEST" FontSize="15" Margin="10"></TextBlock>
+                        <TextBlock Name="portEsc"
+                                   Text="ESC"
+                                   FontSize="15"
+                                   Margin="10"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Name="progressBar2"
+                                VerticalAlignment="Center">
+                        <ProgressBar Height="20"
+                                     Width="50"
+                                     Minimum="0"
+                                     Maximum="100"
+                                     Value="65"
+                                     Background="{x:Null}" />
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Name="portDest"
+                                   Text="DEST"
+                                   FontSize="15"
+                                   Margin="10"></TextBlock>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
 
             <!--stackpanel pour affichage dates arrivées-->
-            <StackPanel x:Name="DateArrivée" Background="ForestGreen" Width="82" Orientation="Vertical">
+            <StackPanel x:Name="DateArrivée"
+                        Background="ForestGreen"
+                        Width="82"
+                        Orientation="Vertical">
                 <StackPanel x:Name="dateArriveDest">
-                    <TextBlock x:Name="DateArriveDest" Text="Date Arrivée" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="DateArriveDest"
+                               Text="Date Arrivée"
+                               HorizontalAlignment="Center" />
                 </StackPanel>
-                <StackPanel x:Name="DateArrivees" Orientation="Horizontal" Margin="10,20">
-                    <StackPanel x:Name="dateArriveeEscale" Width="28"  Background="Gray">
-                        <TextBlock Name="dateEsc" Text="ESC :" HorizontalAlignment="Center" Foreground="Yellow"/>
-                        <TextBlock x:Name="JourArrivée" Text="28" HorizontalAlignment="Center" FontSize="15" Foreground="Yellow"/>
-                        <TextBlock x:Name="MoisArrivé" Text="FEV" HorizontalAlignment="Center" FontSize="15" Foreground="Yellow"/>
+                <StackPanel x:Name="DateArrivees"
+                            Orientation="Horizontal"
+                            Margin="10,20">
+                    <StackPanel x:Name="dateArriveeEscale"
+                                Width="28"
+                                Background="Gray">
+                        <TextBlock Name="dateEsc"
+                                   Text="ESC :"
+                                   HorizontalAlignment="Center"
+                                   Foreground="Yellow" />
+                        <TextBlock x:Name="JourArrivée"
+                                   Text="28"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15"
+                                   Foreground="Yellow" />
+                        <TextBlock x:Name="MoisArrivé"
+                                   Text="FEV"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15"
+                                   Foreground="Yellow" />
                     </StackPanel>
-                    <StackPanel/>
-                    <StackPanel x:Name="dateArriveeDestination" Width="35" Background="Black">
-                        <TextBlock Name="dateDest" Text="DEST :" HorizontalAlignment="Center" />
-                        <TextBlock x:Name="JourDest" Text="14" HorizontalAlignment="Center" FontSize="15" />
-                        <TextBlock x:Name="MoisDest" Text="NOV" HorizontalAlignment="Center" FontSize="15" />
+                    <StackPanel />
+                    <StackPanel x:Name="dateArriveeDestination"
+                                Width="35"
+                                Background="Black">
+                        <TextBlock Name="dateDest"
+                                   Text="DEST :"
+                                   HorizontalAlignment="Center" />
+                        <TextBlock x:Name="JourDest"
+                                   Text="14"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" />
+                        <TextBlock x:Name="MoisDest"
+                                   Text="NOV"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" />
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
@@ -119,153 +249,386 @@
         </StackPanel>
 
         <!--création du stackpanel 2 pour inclure sur Navire (avec inclusion de 3 autres stacks)-->
-        <StackPanel Name="infoNav2" Grid.Column="0" Grid.Row="2"  Orientation="Horizontal" Background="Silver" Margin="0,10,0,0"  HorizontalAlignment="Center" TextBlock.Foreground="AliceBlue">
+        <StackPanel Name="infoNav2"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Orientation="Horizontal"
+                    Background="Silver"
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Center"
+                    TextBlock.Foreground="AliceBlue">
             <!--stackpanel pour Date Départ-->
-            <StackPanel Name="DateDepartNAV2" Background="Coral" Width="82">
-                <StackPanel Name="dateDepartNAV2" Margin="10" />
-                <TextBlock Name="infoDépartNAV2" Text="Date Départ" HorizontalAlignment="Center" FontSize="14" />
-                <TextBlock x:Name="JourDépartNAV2" Text="05" HorizontalAlignment="Center" FontSize="20" Margin="30,0"/>
-                <TextBlock Name="MoisDépartNAV2" Text="FEV" HorizontalAlignment="Center" FontSize="20"/>
+            <StackPanel Name="DateDepartNAV2"
+                        Background="Coral"
+                        Width="82">
+                <StackPanel Name="dateDepartNAV2"
+                            Margin="10" />
+                <TextBlock Name="infoDépartNAV2"
+                           Text="Date Départ"
+                           HorizontalAlignment="Center"
+                           FontSize="14" />
+                <TextBlock x:Name="JourDépartNAV2"
+                           Text="05"
+                           HorizontalAlignment="Center"
+                           FontSize="20"
+                           Margin="30,0" />
+                <TextBlock Name="MoisDépartNAV2"
+                           Text="FEV"
+                           HorizontalAlignment="Center"
+                           FontSize="20" />
             </StackPanel>
 
-            <StackPanel Name="NbreContainerNAV2" Background="BurlyWood" Width="69">
+            <StackPanel Name="NbreContainerNAV2"
+                        Background="BurlyWood"
+                        Width="69">
                 <StackPanel>
-                    <TextBlock Name="NombreContainerDispoNavireNAV2" Text="Nbre" FontSize="12" HorizontalAlignment="Center"></TextBlock>
-                    <TextBlock Name="NombreContainerDispoNavire2NAV2" Text="Container" FontSize="12" HorizontalAlignment="Center"></TextBlock>
-                    <TextBlock Name="NombreContainerDispoNavire3NAV2" Text="Dispo" FontSize="12" HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Name="NombreContainerDispoNavireNAV2"
+                               Text="Nbre"
+                               FontSize="12"
+                               HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Name="NombreContainerDispoNavire2NAV2"
+                               Text="Container"
+                               FontSize="12"
+                               HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Name="NombreContainerDispoNavire3NAV2"
+                               Text="Dispo"
+                               FontSize="12"
+                               HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
                 <StackPanel>
-                    <Grid  Margin="12,10" Height="100" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Ellipse  Width="40" Height="40" Fill="Blue" Stroke="White" StrokeThickness="2" VerticalAlignment="Center" Margin="30,0,30,60" />
-                        <TextBlock Name="ChiffreContainerDispoNAV2" Text="90" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="38,10,37,70"></TextBlock>
+                    <Grid  Margin="12,10"
+                           Height="100"
+                           Width="100"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center">
+                        <Ellipse  Width="40"
+                                  Height="40"
+                                  Fill="Blue"
+                                  Stroke="White"
+                                  StrokeThickness="2"
+                                  VerticalAlignment="Center"
+                                  Margin="30,0,30,60" />
+                        <TextBlock Name="ChiffreContainerDispoNAV2"
+                                   Text="90"
+                                   FontSize="15"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="38,10,37,70"></TextBlock>
                     </Grid>
                 </StackPanel>
             </StackPanel>
 
             <!--stackpanel pour info trajet navire-->
-            <StackPanel x:Name="DétailNavireNAV2" Background="CadetBlue" Width="261">
-                <TextBlock Name="infosTrajetNAV2"  HorizontalAlignment="Center" FontSize="20" />
-                <StackPanel x:Name="nomnavireNAV2" Background="Brown" TextElement.Foreground="Black">
-                    <TextBlock x:Name="NomNavNAV2" Text="LE TITANIC"  HorizontalAlignment="Center" FontStyle="Italic" Foreground="#FFF9E8E8" FontSize="30" />
+            <StackPanel x:Name="DétailNavireNAV2"
+                        Background="CadetBlue"
+                        Width="261">
+                <TextBlock Name="infosTrajetNAV2"
+                           HorizontalAlignment="Center"
+                           FontSize="20" />
+                <StackPanel x:Name="nomnavireNAV2"
+                            Background="Brown"
+                            TextElement.Foreground="Black">
+                    <TextBlock x:Name="NomNavNAV2"
+                               Text="LE TITANIC"
+                               HorizontalAlignment="Center"
+                               FontStyle="Italic"
+                               Foreground="#FFF9E8E8"
+                               FontSize="30" />
                 </StackPanel>
-                <StackPanel Name="infoTrajetNAV2" Orientation="Horizontal" Margin="10" >
+                <StackPanel Name="infoTrajetNAV2"
+                            Orientation="Horizontal"
+                            Margin="10">
                     <StackPanel Name="PortDepNAV2">
-                        <TextBlock Name="portDepNAV2" Text="DEP" FontSize="15" Margin="10"></TextBlock>
+                        <TextBlock Name="portDepNAV2"
+                                   Text="DEP"
+                                   FontSize="15"
+                                   Margin="10"></TextBlock>
                     </StackPanel>
-                    <StackPanel Name="progressBar1NAV2" VerticalAlignment="Center">
-                        <ProgressBar Height="20" Width="50" Minimum="0" Maximum="100" Value="75" Background="{x:Null}"/>
-                    </StackPanel>
-                    <StackPanel >
-                        <TextBlock Name="portEscNAV2" Text="ESC" FontSize="15" Margin="10"></TextBlock>
-                    </StackPanel>
-                    <StackPanel Name="progressBar2NAV2" VerticalAlignment="Center">
-                        <ProgressBar Height="20" Width="50" Minimum="0" Maximum="100" Value="0" Background="{x:Null}"/>
+                    <StackPanel Name="progressBar1NAV2"
+                                VerticalAlignment="Center">
+                        <ProgressBar Height="20"
+                                     Width="50"
+                                     Minimum="0"
+                                     Maximum="100"
+                                     Value="75"
+                                     Background="{x:Null}" />
                     </StackPanel>
                     <StackPanel>
-                        <TextBlock Name="portDestNAV2" Text="DEST" FontSize="15" Margin="10"></TextBlock>
+                        <TextBlock Name="portEscNAV2"
+                                   Text="ESC"
+                                   FontSize="15"
+                                   Margin="10"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Name="progressBar2NAV2"
+                                VerticalAlignment="Center">
+                        <ProgressBar Height="20"
+                                     Width="50"
+                                     Minimum="0"
+                                     Maximum="100"
+                                     Value="0"
+                                     Background="{x:Null}" />
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Name="portDestNAV2"
+                                   Text="DEST"
+                                   FontSize="15"
+                                   Margin="10"></TextBlock>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
 
             <!--stackpanel pour affichage dates arrivées-->
-            <StackPanel x:Name="DateArrivéeNAV2" Background="ForestGreen" Width="82" Orientation="Vertical">
+            <StackPanel x:Name="DateArrivéeNAV2"
+                        Background="ForestGreen"
+                        Width="82"
+                        Orientation="Vertical">
                 <StackPanel x:Name="dateArriveDestNAV2">
-                    <TextBlock x:Name="DateArriveDestNAV2" Text="Date Arrivée" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="DateArriveDestNAV2"
+                               Text="Date Arrivée"
+                               HorizontalAlignment="Center" />
                 </StackPanel>
-                <StackPanel x:Name="DateArriveesNAV2" Orientation="Horizontal" Margin="10,20">
-                    <StackPanel x:Name="dateArriveeEscaleNAV2" Width="28"  Background="Gray">
-                        <TextBlock Name="dateEscNAV2" Text="ESC :" HorizontalAlignment="Center" Foreground="Yellow"/>
-                        <TextBlock x:Name="JourArrivéeNAV2" Text="28" HorizontalAlignment="Center" FontSize="15" Foreground="Yellow"/>
-                        <TextBlock x:Name="MoisArrivéNAV2" Text="FEV" HorizontalAlignment="Center" FontSize="15" Foreground="Yellow"/>
+                <StackPanel x:Name="DateArriveesNAV2"
+                            Orientation="Horizontal"
+                            Margin="10,20">
+                    <StackPanel x:Name="dateArriveeEscaleNAV2"
+                                Width="28"
+                                Background="Gray">
+                        <TextBlock Name="dateEscNAV2"
+                                   Text="ESC :"
+                                   HorizontalAlignment="Center"
+                                   Foreground="Yellow" />
+                        <TextBlock x:Name="JourArrivéeNAV2"
+                                   Text="28"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15"
+                                   Foreground="Yellow" />
+                        <TextBlock x:Name="MoisArrivéNAV2"
+                                   Text="FEV"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15"
+                                   Foreground="Yellow" />
                     </StackPanel>
-                    <StackPanel/>
-                    <StackPanel x:Name="dateArriveeDestinationNAV2" Width="35" Background="Black">
-                        <TextBlock Name="dateDestNAV2" Text="DEST :" HorizontalAlignment="Center" />
-                        <TextBlock x:Name="JourDestNAV2" Text="14" HorizontalAlignment="Center" FontSize="15" />
-                        <TextBlock x:Name="MoisDestNAV2" Text="NOV" HorizontalAlignment="Center" FontSize="15" />
+                    <StackPanel />
+                    <StackPanel x:Name="dateArriveeDestinationNAV2"
+                                Width="35"
+                                Background="Black">
+                        <TextBlock Name="dateDestNAV2"
+                                   Text="DEST :"
+                                   HorizontalAlignment="Center" />
+                        <TextBlock x:Name="JourDestNAV2"
+                                   Text="14"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" />
+                        <TextBlock x:Name="MoisDestNAV2"
+                                   Text="NOV"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" />
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
 
         <!--création du stackpanel 3 pour inclure sur Navire (avec inclusion de 3 autres stacks)-->
-        <StackPanel Name="infoNav3" Grid.Column="0" Grid.Row="3"  Orientation="Horizontal" Background="Silver" Margin="0,10,0,0"  HorizontalAlignment="Center" TextBlock.Foreground="AliceBlue">
+        <StackPanel Name="infoNav3"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Orientation="Horizontal"
+                    Background="Silver"
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Center"
+                    TextBlock.Foreground="AliceBlue">
             <!--stackpanel pour Date Départ-->
-            <StackPanel Name="DateDepartNAV3" Background="Coral" Width="82">
-                <StackPanel Name="dateDepartNAV3" Margin="10" />
-                <TextBlock Name="infoDépartNAV3" Text="Date Départ" HorizontalAlignment="Center" FontSize="14" />
-                <TextBlock x:Name="JourDépartNAV3" Text="17" HorizontalAlignment="Center" FontSize="20" Margin="30,0"/>
-                <TextBlock Name="MoisDépartNAV3" Text="JUN" HorizontalAlignment="Center" FontSize="20"/>
+            <StackPanel Name="DateDepartNAV3"
+                        Background="Coral"
+                        Width="82">
+                <StackPanel Name="dateDepartNAV3"
+                            Margin="10" />
+                <TextBlock Name="infoDépartNAV3"
+                           Text="Date Départ"
+                           HorizontalAlignment="Center"
+                           FontSize="14" />
+                <TextBlock x:Name="JourDépartNAV3"
+                           Text="17"
+                           HorizontalAlignment="Center"
+                           FontSize="20"
+                           Margin="30,0" />
+                <TextBlock Name="MoisDépartNAV3"
+                           Text="JUN"
+                           HorizontalAlignment="Center"
+                           FontSize="20" />
             </StackPanel>
 
-            <StackPanel Name="NbreContainerNAV2NAV3" Background="BurlyWood" Width="69">
+            <StackPanel Name="NbreContainerNAV2NAV3"
+                        Background="BurlyWood"
+                        Width="69">
                 <StackPanel>
-                    <TextBlock Name="NombreContainerDispoNavireNAV3" Text="Nbre" FontSize="12" HorizontalAlignment="Center"></TextBlock>
-                    <TextBlock Name="NombreContainerDispoNavire2NAV3" Text="Container" FontSize="12" HorizontalAlignment="Center"></TextBlock>
-                    <TextBlock Name="NombreContainerDispoNavire3NAV3" Text="Dispo" FontSize="12" HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Name="NombreContainerDispoNavireNAV3"
+                               Text="Nbre"
+                               FontSize="12"
+                               HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Name="NombreContainerDispoNavire2NAV3"
+                               Text="Container"
+                               FontSize="12"
+                               HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Name="NombreContainerDispoNavire3NAV3"
+                               Text="Dispo"
+                               FontSize="12"
+                               HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
                 <StackPanel>
-                    <Grid  Margin="12,10" Height="100" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Ellipse  Width="40" Height="40" Fill="Blue" Stroke="White" StrokeThickness="2" VerticalAlignment="Center" Margin="30,0,30,60" />
-                        <TextBlock Name="ChiffreContainerDispoNAV3" Text="135" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="38,10,37,70"></TextBlock>
+                    <Grid  Margin="12,10"
+                           Height="100"
+                           Width="100"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center">
+                        <Ellipse  Width="40"
+                                  Height="40"
+                                  Fill="Blue"
+                                  Stroke="White"
+                                  StrokeThickness="2"
+                                  VerticalAlignment="Center"
+                                  Margin="30,0,30,60" />
+                        <TextBlock Name="ChiffreContainerDispoNAV3"
+                                   Text="135"
+                                   FontSize="15"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="38,10,37,70"></TextBlock>
                     </Grid>
                 </StackPanel>
             </StackPanel>
 
             <!--stackpanel pour info trajet navire-->
-            <StackPanel x:Name="DétailNavireNAV3" Background="CadetBlue" Width="261">
-                <TextBlock Name="infosTrajetNAV3"  HorizontalAlignment="Center" FontSize="20" />
-                <StackPanel x:Name="nomnavireNAV3" Background="Brown" TextElement.Foreground="Black">
-                    <TextBlock x:Name="NomNavNAV3" Text="TUNIS SHIPPER"  HorizontalAlignment="Center" FontStyle="Italic" Foreground="#FFF9E8E8" FontSize="30" />
+            <StackPanel x:Name="DétailNavireNAV3"
+                        Background="CadetBlue"
+                        Width="261">
+                <TextBlock Name="infosTrajetNAV3"
+                           HorizontalAlignment="Center"
+                           FontSize="20" />
+                <StackPanel x:Name="nomnavireNAV3"
+                            Background="Brown"
+                            TextElement.Foreground="Black">
+                    <TextBlock x:Name="NomNavNAV3"
+                               Text="TUNIS SHIPPER"
+                               HorizontalAlignment="Center"
+                               FontStyle="Italic"
+                               Foreground="#FFF9E8E8"
+                               FontSize="30" />
                 </StackPanel>
-                <StackPanel Name="infoTrajetNAV3" Orientation="Horizontal" Margin="10" >
+                <StackPanel Name="infoTrajetNAV3"
+                            Orientation="Horizontal"
+                            Margin="10">
                     <StackPanel Name="PortDepNAV3">
-                        <TextBlock Name="portDepNAV3" Text="DEP" FontSize="15" Margin="10"></TextBlock>
+                        <TextBlock Name="portDepNAV3"
+                                   Text="DEP"
+                                   FontSize="15"
+                                   Margin="10"></TextBlock>
                     </StackPanel>
-                    <StackPanel Name="progressBar1NAV3" VerticalAlignment="Center">
-                        <ProgressBar Height="20" Width="50" Minimum="0" Maximum="100" Value="75" Background="{x:Null}"/>
-                    </StackPanel>
-                    <StackPanel >
-                        <TextBlock Name="portEscNAV3" Text="ESC" FontSize="15" Margin="10"></TextBlock>
-                    </StackPanel>
-                    <StackPanel Name="progressBar2NAV3" VerticalAlignment="Center">
-                        <ProgressBar Height="20" Width="50" Minimum="0" Maximum="100" Value="90" Background="{x:Null}"/>
+                    <StackPanel Name="progressBar1NAV3"
+                                VerticalAlignment="Center">
+                        <ProgressBar Height="20"
+                                     Width="50"
+                                     Minimum="0"
+                                     Maximum="100"
+                                     Value="75"
+                                     Background="{x:Null}" />
                     </StackPanel>
                     <StackPanel>
-                        <TextBlock Name="portDestNAV3" Text="DEST" FontSize="15" Margin="10"></TextBlock>
+                        <TextBlock Name="portEscNAV3"
+                                   Text="ESC"
+                                   FontSize="15"
+                                   Margin="10"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Name="progressBar2NAV3"
+                                VerticalAlignment="Center">
+                        <ProgressBar Height="20"
+                                     Width="50"
+                                     Minimum="0"
+                                     Maximum="100"
+                                     Value="90"
+                                     Background="{x:Null}" />
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Name="portDestNAV3"
+                                   Text="DEST"
+                                   FontSize="15"
+                                   Margin="10"></TextBlock>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
 
             <!--stackpanel pour affichage dates arrivées-->
-            <StackPanel x:Name="DateArrivéeNAV3" Background="ForestGreen" Width="82" Orientation="Vertical">
+            <StackPanel x:Name="DateArrivéeNAV3"
+                        Background="ForestGreen"
+                        Width="82"
+                        Orientation="Vertical">
                 <StackPanel x:Name="dateArriveDestNAV3">
-                    <TextBlock x:Name="DateArriveDestNAV3" Text="Date Arrivée" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="DateArriveDestNAV3"
+                               Text="Date Arrivée"
+                               HorizontalAlignment="Center" />
                 </StackPanel>
-                <StackPanel x:Name="DateArriveesNAV3" Orientation="Horizontal" Margin="10,20">
-                    <StackPanel x:Name="dateArriveeEscaleNAV3" Width="28"  Background="Gray">
-                        <TextBlock Name="dateEscNAV3" Text="ESC :" HorizontalAlignment="Center" Foreground="Yellow"/>
-                        <TextBlock x:Name="JourArrivéeNAV3" Text="08" HorizontalAlignment="Center" FontSize="15" Foreground="Yellow"/>
-                        <TextBlock x:Name="MoisArrivéNAV3" Text="OCT" HorizontalAlignment="Center" FontSize="15" Foreground="Yellow"/>
+                <StackPanel x:Name="DateArriveesNAV3"
+                            Orientation="Horizontal"
+                            Margin="10,20">
+                    <StackPanel x:Name="dateArriveeEscaleNAV3"
+                                Width="28"
+                                Background="Gray">
+                        <TextBlock Name="dateEscNAV3"
+                                   Text="ESC :"
+                                   HorizontalAlignment="Center"
+                                   Foreground="Yellow" />
+                        <TextBlock x:Name="JourArrivéeNAV3"
+                                   Text="08"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15"
+                                   Foreground="Yellow" />
+                        <TextBlock x:Name="MoisArrivéNAV3"
+                                   Text="OCT"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15"
+                                   Foreground="Yellow" />
                     </StackPanel>
-                    <StackPanel/>
-                    <StackPanel x:Name="dateArriveeDestinationNAV3" Width="35" Background="Black">
-                        <TextBlock Name="dateDestNAV3" Text="DEST :" HorizontalAlignment="Center" />
-                        <TextBlock x:Name="JourDestNAV3" Text="23" HorizontalAlignment="Center" FontSize="15" />
-                        <TextBlock x:Name="MoisDestNAV3" Text="DEC" HorizontalAlignment="Center" FontSize="15" />
+                    <StackPanel />
+                    <StackPanel x:Name="dateArriveeDestinationNAV3"
+                                Width="35"
+                                Background="Black">
+                        <TextBlock Name="dateDestNAV3"
+                                   Text="DEST :"
+                                   HorizontalAlignment="Center" />
+                        <TextBlock x:Name="JourDestNAV3"
+                                   Text="23"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" />
+                        <TextBlock x:Name="MoisDestNAV3"
+                                   Text="DEC"
+                                   HorizontalAlignment="Center"
+                                   FontSize="15" />
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
 
-        <DockPanel Name="AjouterNavire" Background="Gray" Grid.Column="0" Grid.Row="5" Margin="0,10,0,0">
-            <Button x:Name="button" Content="RECHERCHER UN AUTRE NAVIRE"  Width="198" Height="50" VerticalAlignment="Center">
+        <DockPanel Name="AjouterNavire"
+                   Background="Gray"
+                   Grid.Column="0"
+                   Grid.Row="5"
+                   Margin="0,10,0,0">
+            <Button x:Name="button"
+                    Content="RECHERCHER UN AUTRE NAVIRE"
+                    Width="198"
+                    Height="50"
+                    VerticalAlignment="Center">
                 <Button.Background>
-                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                        <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
-                        <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
-                        <GradientStop Color="#FF6A787A" Offset="1"/>
+                    <LinearGradientBrush EndPoint="0,1"
+                                         StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3"
+                                      Offset="0" />
+                        <GradientStop Color="#FFEBEBEB"
+                                      Offset="0.5" />
+                        <GradientStop Color="#FFDDDDDD"
+                                      Offset="0.5" />
+                        <GradientStop Color="#FF6A787A"
+                                      Offset="1" />
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
