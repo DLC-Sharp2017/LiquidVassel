@@ -82,8 +82,6 @@
     <Compile Include="WindowTournee.xaml.cs">
       <DependentUpon>WindowTournee.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-    </Page>
     <Compile Include="AnomalieB.cs" />
     <Compile Include="Armateur.cs" />
     <Compile Include="Bateau.cs" />
