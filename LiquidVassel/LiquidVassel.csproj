@@ -97,6 +97,12 @@
     <Compile Include="Conteneur.cs" />
     <Compile Include="distanceheure.cs" />
     <Compile Include="Etat_tc.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageLogin.xaml.cs">
+      <DependentUpon>PageLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pay.cs" />
     <Compile Include="peut_subir.cs" />
     <Compile Include="Rotation.cs" />
@@ -110,7 +116,6 @@
       <DependentUpon>VueDashboard.xaml</DependentUpon>
     </Compile>
     <Page Include="LoginWindow.xaml">
-
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -122,12 +127,14 @@
       <DependentUpon>LoginWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowTournee.xaml">
     </Page>
 
     <Page Include="VueDashboard.xaml">
-
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
