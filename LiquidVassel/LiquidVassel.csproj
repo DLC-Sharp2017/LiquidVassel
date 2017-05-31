@@ -76,6 +76,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ajoutertourné.xaml.cs">
+      <DependentUpon>Ajoutertourné.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AnomalieB.cs" />
     <Compile Include="Armateur.cs" />
     <Compile Include="Bateau.cs" />
@@ -101,6 +104,10 @@
     <Compile Include="VueNavire3.xaml.cs">
       <DependentUpon>VueNavire3.xaml</DependentUpon>
     </Compile>
+    <Page Include="Ajoutertourné.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

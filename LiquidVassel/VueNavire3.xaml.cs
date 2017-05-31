@@ -11,7 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Data.SqlClient; 
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 
 namespace LiquidVassel
@@ -24,32 +25,32 @@ namespace LiquidVassel
         public VueNavire3()
         {
             InitializeComponent();
-        }
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            text1.Clear();
-        }
+            
+            using (var vm = new VesselModel())
+            {
 
-        private void button_Copy_Click(object sender, RoutedEventArgs e)
-        {
-            text2.Clear();
-        }
+                var query = (from b in vm.Bateaux
 
-        private void button_Copy1_Click(object sender, RoutedEventArgs e)
-        {
-            text3.Clear();
-        }
+                             select b.Capitaine).ToList() ;
+              
+                laliste.Items.Add(query); 
 
-        private void button_Copy2_Click(object sender, RoutedEventArgs e)
-        {
-            textB2.Clear();
-        }
+                //for (int i = 0; i < query.Count; i++)
+                //{
+                //    laliste.Items.Add(query.ToList());
+                //}
 
-        private void button_Copy3_Click(object sender, RoutedEventArgs e)
-        {
-            textB1.Clear();
-        }
+                //laliste.Items.Add(query.ToArray());
+                //{
+                //    listBox.Items.Add(query.ToList());
+                //}
 
+
+            }
+        }
+                
+
+    
         private void modifié_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("vous allez modifié une nouvelle tourné");
@@ -57,12 +58,12 @@ namespace LiquidVassel
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            text1.Clear();
-            text2.Clear();
-            text3.Clear();
-            textB2.Clear();
-            textB1.Clear();
-            textnom.Clear();
+            DimentionNavire.Clear();
+            Pays.Clear();
+            NombreEquipage.Clear();
+            TirEau.Clear();
+            TotalSlots.Clear();
+            NomNavire.Clear();
         }
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -74,9 +75,9 @@ namespace LiquidVassel
             MessageBox.Show("vous aller ajouter une tournée");
         }
 
+
+
        
     }
-
-
 
 }
