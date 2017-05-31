@@ -17,7 +17,7 @@ using System.Data.SqlClient;
 namespace LiquidVassel
 {
     /// <summary>
-    /// Logique d'interaction pour VueNavire3.xaml
+    /// Logique d'interaction pour     VueNavire3.xaml
     /// </summary>
     public partial class VueNavire3 : Page
     {
