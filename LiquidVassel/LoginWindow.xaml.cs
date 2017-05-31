@@ -30,7 +30,6 @@ namespace LiquidVassel
 
         private void btnSign_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 using (var connect = new VesselModel())
@@ -59,7 +58,7 @@ namespace LiquidVassel
             catch (Exception ex)
             {
 
-                MessageBox.Show("Votre délai d'attente est dépassé \n"+ ex.Message);
+                MessageBox.Show("Votre délai d'attente est dépassé \n" + ex.Message);
             }
             
         }
