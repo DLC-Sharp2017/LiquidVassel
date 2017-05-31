@@ -19,14 +19,15 @@
                                         BorderBrush="{TemplateBinding BorderBrush}" 
                                         Background="{TemplateBinding Background}"
                                         CornerRadius="50,50,50,50"
+                                        Margin="0,0,10,10"
                                         >
-
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
-
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            <Setter Property="Background" Value="CornflowerBlue"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
 
         <Style x:Key="ButtonStyle" TargetType="Button">
@@ -44,6 +45,10 @@
 
             </Setter>
         </Style>
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Margin" Value="0,0,15,0"/>
+        </Style>
 
 
     </Page.Resources>
@@ -56,10 +61,9 @@
             <RowDefinition Height="350"/>
         </Grid.RowDefinitions>
 
-        <StackPanel HorizontalAlignment="Center" Width="248" Orientation="Horizontal" Margin="290,116,450,49" x:Name="spanelPort">
+        <StackPanel HorizontalAlignment="Center" Width="248" Orientation="Horizontal" Margin="344,71,396,89" x:Name="spanelPort" VerticalAlignment="Center" Height="39">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Label}">
-
                     <Setter Property="HorizontalAlignment" Value="Center"/>
                 </Style>
             </StackPanel.Resources>
@@ -67,28 +71,15 @@
                 <ImageBrush/>
             </StackPanel.Background>
 
-         
-
-        </StackPanel>
-
-        <StackPanel HorizontalAlignment="Center" Height="23" Margin="427,150,435,0" VerticalAlignment="Top" Width="Auto"
-                    Orientation="Horizontal">
-
-            <StackPanel.Resources>
-                <Style TargetType="{x:Type TextBlock}">
-                    <Setter Property="Width" Value="22"/>
-                    <Setter Property="Margin" Value="0,0,10,0"/>
-                </Style>
-            </StackPanel.Resources>
-
-            <TextBlock x:Name="textBlock2"/>
-            <TextBlock x:Name="textBlock3"/>
-            <TextBlock x:Name="textBlock4"/>
-            <TextBlock x:Name="textBlock5"/>
 
 
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="151" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="119">
+
+        <StackPanel HorizontalAlignment="Center" Height="35"  VerticalAlignment="Center" Width="248"
+                    Orientation="Horizontal" x:Name="spanelDate" Margin="344,110,396,54">
+
+        </StackPanel>
+        <StackPanel x:Name="spanelPort2" HorizontalAlignment="Left" Height="151" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="119">
             <StackPanel.Resources>
                 <Style TargetType="{x:Type TextBox}">
                     <Setter Property="Margin" Value="0,0,0,20"/>
@@ -101,20 +92,20 @@
             <TextBox x:Name="textBox7" Height="23" Margin="0" TextWrapping="Wrap" Text="TextBox" RenderTransformOrigin="0.504,1.826"/>
         </StackPanel>
 
-        <StackPanel HorizontalAlignment="Left" Height="151" Margin="134,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100">
+        <StackPanel x:Name="spanelDelete" HorizontalAlignment="Left" Height="151" Margin="134,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100">
 
             <Button x:Name="button1" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
             <Button x:Name="button2" Content="Button" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}" Margin="37.5,0,37.5,15"  Height="25" Width="25"/>
             <Button x:Name="button3" Content="Button" Style="{StaticResource ButtonStyle}" Height="25" Margin="37.5,0,37.5,15"/>
             <Button x:Name="button3_Copy" Content="Button" Style="{StaticResource ButtonStyle}" Height="25" Margin="37.5,0,37.5,15"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="151" Margin="239,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100">
+        <StackPanel x:Name="spanelEdit" HorizontalAlignment="Left" Height="151" Margin="239,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100">
             <Button x:Name="button1_Copy" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
             <Button x:Name="button1_Copy1" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
             <Button x:Name="button1_Copy2" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
             <Button x:Name="button3_Copy1" Content="Button" Style="{StaticResource ButtonStyle}" Height="25" Margin="37.5,0,37.5,15"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="151" Margin="344,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100">
+        <StackPanel x:Name="spanelAdd" HorizontalAlignment="Left" Height="151" Margin="344,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100">
             <Button x:Name="button1_Copy3" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
             <Button x:Name="button1_Copy4" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>
             <Button x:Name="button1_Copy5" Content="Button" Style="{StaticResource ButtonStyle}"  Margin="37.5,0,37.5,15" Height="25" Click="button1_Click"/>

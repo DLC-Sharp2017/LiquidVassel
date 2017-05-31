@@ -25,45 +25,58 @@ namespace LiquidVassel
         {
             InitializeComponent();
 
-            carteTournee.Center = new Location(47.6421, -122.1420);
-
-          
-            Label label_port1 = new Label();
-            label_port1.Content = "Test";
-
-           spanelPort.Children.Add(label_port1);
-           
-          
-                      
+            carteTournee.Center = new Location(47.6421, -122.1420);               
 
             using (var vm = new VesselModel())
             {
-                var query = from b in vm.sequences
+                var query = (from b in vm.sequences
                             where b.IdRota=="MED"
                             orderby  b.dateDepart
-                            select b.codePortDep;
+                            select b.codePortDep).ToList();
 
-                var portTournee = query.ToList();
+   
 
                 List<Label> listportTournee = new List<Label>();
+                Style labelStyle = this.FindResource("LabelStyle") as Style;
 
-                for (int i = 0; i < portTournee.Count; i++)
+                for (int i = 0; i < query.Count; i++)
                 {
                     string nomLabel = "label_port" + i.ToString();
                     listportTournee.Add(new Label { Name = nomLabel });
-                 
+                    listportTournee[i].Content = query[i];
+                    listportTournee[i].Style = labelStyle;
+                    
+                    spanelPort.Children.Add(listportTournee[i]);
                 }
-               
-         
-
-    }
 
 
+                var query2 = (from b in vm.sequences
+                         where b.IdRota == "MED"
+                         orderby b.dateDepart
+                         select b.dateDepart).ToList();
+
+                List<TextBlock> listdateTournee = new List<TextBlock>();
+                Style textblockStyle = this.FindResource("TextBlockStyle") as Style;
+
+                for (int i = 0; i < query2.Count; i++)
+                {
+                    string nomTextBlock = "textblock_date" + i.ToString();
+                    listdateTournee.Add(new TextBlock { Name = nomTextBlock });
+                    listdateTournee[i].Text = new string (query2[i].ToString().Take(5).ToArray());
+                    listdateTournee[i].Style = textblockStyle;
+                   
+                    spanelDate.Children.Add(listdateTournee[i]);
+                }
+
+
+            }
 
 
 
 
-}
+
+
+        }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
