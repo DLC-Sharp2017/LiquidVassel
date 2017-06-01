@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Connection" Height="350" Width="525">
     <Grid>
-        <Image Source="vesselLogin.jpg"/>
+        <Image Name="vesselLogin" Source="vesselLogin.jpg"/>
 
         <StackPanel Orientation="Vertical">
             <TextBlock Margin="10" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Text="Login" Foreground ="white"/>
