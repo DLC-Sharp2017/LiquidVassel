@@ -39,7 +39,6 @@
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
-
             </Setter>
             <Setter Property="Height" Value="25"/>
             <Setter Property="Width" Value="25"/>
@@ -50,8 +49,6 @@
             <Setter Property="Width" Value="Auto"/>
             <Setter Property="Margin" Value="0,0,15,0"/>
         </Style>
-
-
     </Page.Resources>
 
 

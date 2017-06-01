@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
 using Microsoft.Maps.MapControl.WPF;
 
 namespace LiquidVassel
@@ -46,6 +45,8 @@ namespace LiquidVassel
                             orderby  b.dateDepart
                             select b.codePortDep).ToList();
 
+               
+
 
                 // Création des collections pour contenir les controls à créer dans l'interface
                 var listLabelPort = new List<Label>();
@@ -59,12 +60,13 @@ namespace LiquidVassel
 
                 // Récupération des styles définis dans la page.ressources du xaml
                 Style labelStyle = this.FindResource("LabelStyle") as Style;
-                Style buttonStyle = this.FindResource("ButtonStyle") as Style;  
+                Style buttonStyle = this.FindResource("ButtonStyle") as Style;                                                                                                                                
                 
                                                                     
                 for (int i = 0; i < query.Count; i++)
                 {
                    
+                    
                     //créer et ajouter à la liste les contrôles en leur donnant un nom et un numéro dynamiquement
                     listLabelPort.Add(new Label { Name = "label_port" + i.ToString() });
                     listTextBlockPort.Add(new TextBlock { Name = "textblock_port"+i.ToString()});
@@ -127,6 +129,8 @@ namespace LiquidVassel
         private void button1_Click(object sender, RoutedEventArgs e)
         {
 
+            Window inputPort = new Window();
+            
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -143,6 +147,98 @@ namespace LiquidVassel
             ScrollDelete.ScrollToVerticalOffset(e.VerticalOffset);
             ScrollModify.ScrollToVerticalOffset(e.VerticalOffset);
             ScrollAdd.ScrollToVerticalOffset(e.VerticalOffset);
+
+        }
+
+        /// <summary>
+        /// Fonction d'ajout d'un port dans la tournée.
+        /// </summary>
+        /// <param name="port"></param>
+        /// <param name="datedep"></param>
+        /// <param name="listLabelPort"></param>
+        /// <param name="listTbDate"></param>
+        /// <param name="listTbPort"></param>
+        /// <param name="listButtonAdd"></param>
+        /// <param name="listButtonModify"></param>
+        /// <param name="listButtonDelete"></param>
+        private void add_Port(string port, string datedep,List<Label> listLabelPort, List<TextBlock> listTbDate, List<TextBlock> listTbPort, 
+            List<Button> listButtonAdd, List<Button> listButtonModify, List<Button> listButtonDelete)
+        {
+
+            //Récupère le numéro associé au dernier label.
+            int i = int.Parse(listLabelPort.Last().ToString().Skip(10).ToString());
+           
+
+            listLabelPort.Add(new Label { Name = "label_port" + i.ToString() });
+            listTbDate.Add(new TextBlock { Name = "textblock_date" + i.ToString() });
+            listTbPort.Add(new TextBlock { Name = "textblock_port" + i.ToString() });
+            listButtonAdd.Add(new Button { Name = "ButtonAdd" + i.ToString() });
+            listButtonModify.Add(new Button { Name = "ButtonModify" + i.ToString() });
+            listButtonDelete.Add(new Button { Name = "ButtonDelete" + i.ToString() });
+
+            listLabelPort.Last().Content = port;
+            listTbDate.Last().Text = datedep;
+            listTbPort.Last().Text = port;
+
+            Style labelStyle = this.FindResource("LabelStyle") as Style;
+            Style buttonStyle = this.FindResource("ButtonStyle") as Style;
+
+            listLabelPort.Last().Style = labelStyle;
+            listButtonAdd.Last().Style = buttonStyle;
+            listButtonModify.Last().Style = buttonStyle;
+            listButtonDelete.Last().Style = buttonStyle;
+
+            listButtonAdd.Last().Content = "+";
+            listButtonModify.Last().Content = "~";
+            listButtonDelete.Last().Content = "x";
+
+            spanelPort.Children.Add(listLabelPort.Last());
+            spanelPort2.Children.Add(listTbPort.Last());
+            spanelDate.Children.Add(listTbDate.Last());
+            spanelAdd.Children.Add(listButtonAdd.Last());
+            spanelModify.Children.Add(listButtonModify.Last());
+            spanelDelete.Children.Add(listButtonDelete.Last());
+
+
+
+        }
+
+        /// <summary>
+        /// Fonction supprimer un port de la tournée.
+        /// </summary>
+        /// <param name="port"></param>
+        /// <param name="datedep"></param>
+        /// <param name="listLabelPort"></param>
+        /// <param name="listTbDate"></param>
+        /// <param name="listTbPort"></param>
+        /// <param name="listButtonAdd"></param>
+        /// <param name="listButtonModify"></param>
+        /// <param name="listButtonDelete"></param>
+        private void delete_Port(string port, string datedep, List<Label> listLabelPort, List<TextBlock> listTbDate, List<TextBlock> listTbPort,
+          List<Button> listButtonAdd, List<Button> listButtonModify, List<Button> listButtonDelete)
+        {
+            
+            int i = listLabelPort.Count + 1;
+
+            int y = listLabelPort.FindIndex(x => (string)x.Content == port);
+
+            listLabelPort.RemoveAt(y);
+            spanelPort.Children.RemoveAt(y);
+
+            listTbPort.RemoveAt(y);
+            spanelPort2.Children.RemoveAt(y);
+
+            listTbDate.RemoveAt(y);
+            spanelDate.Children.RemoveAt(y);
+
+            listButtonAdd.RemoveAt(y);
+            spanelAdd.Children.RemoveAt(y);
+            listButtonModify.RemoveAt(y);
+            spanelModify.Children.RemoveAt(y);
+            listButtonDelete.RemoveAt(y);
+            spanelDelete.Children.RemoveAt(y);
+
+
 
         }
     }
