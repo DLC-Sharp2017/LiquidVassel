@@ -102,9 +102,7 @@ namespace LiquidVassel
 
                 using (var vm = new VesselModel())
                 {
-
                     Bateau bat = new Bateau();
-
                     bat.IDmat = Idmatricule.Text;
                     bat.nameVsl = textnom.Text;
                     bat.IDcapitaine = IDdeCapitaine.Text;
@@ -117,13 +115,10 @@ namespace LiquidVassel
                     bat.nbreEquipage = int.Parse(NombreEquipages.Text);
                     bat.IDcapitaine = IDdeCapitaine.Text;
                     bat.IdRota = idrotation.Text;
-
                     vm.Bateaux.Add(bat);
                     vm.SaveChanges();
-
                     MessageBox.Show("BATEAU ajouter avec succé");
                 }
-
             }
             catch (OverflowException j)
             {
@@ -142,8 +137,6 @@ namespace LiquidVassel
             {
                 MessageBox.Show(d.Message);
             }
-
-
 
         }
 
