@@ -46,8 +46,8 @@ namespace LiquidVassel
                     if (loginQuery.Count == 1)
                     {
                         MessageBox.Show("Vous êtes connecté!");
-                        Page VueDashboard = new Page();
-                        this.NavigationService.Navigate(VueDashboard);
+                        VueDashboard page2 = new VueDashboard();
+                        this.NavigationService.Navigate(page2);
                     }
                     else
                     {
