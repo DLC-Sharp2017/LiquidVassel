@@ -68,6 +68,7 @@ namespace LiquidVassel
             idarmateur.Clear();
             idrotation.Clear();
             LargeurBateu.Clear();
+            
 
         }
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

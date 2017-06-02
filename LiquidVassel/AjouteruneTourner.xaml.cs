@@ -56,10 +56,17 @@ namespace LiquidVassel
                     vm.Rotations.Add(rot);
                     vm.SaveChanges();
                     MessageBox.Show("element ajouter avec succé");
+                } 
+                catch(ObjectDisposedException p)
+                {
+                    MessageBox.Show(p.Message); 
+                }
+                catch(NotSupportedException l)
+                {
+                    MessageBox.Show(l.Message);
                 }
                 catch (Exception k)
                 {
-
                     MessageBox.Show(k.Message);
                 }
 
