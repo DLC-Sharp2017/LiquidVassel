@@ -24,30 +24,29 @@ namespace LiquidVassel
         public VueNavire3()
         {
             InitializeComponent();
-        }
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            text1.Clear();
-        }
 
-        private void button_Copy_Click(object sender, RoutedEventArgs e)
-        {
-            text2.Clear();
-        }
+            try
+            {
 
-        private void button_Copy1_Click(object sender, RoutedEventArgs e)
-        {
-            text3.Clear();
-        }
+                using (var vm = new VesselModel())
+                {
+                    var query = (from b in vm.Rotations
+                                 select b.nom).ToList();
+                    // recuperer une collection de donné 
+                    foreach (var item in query)
+                    {
+                        //convertir chaque element de la collection en string 
+                        var affiche = item.ToString();
+                        // afficher les string dans un combobox
+                        comboBox.Items.Add(affiche);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
 
-        private void button_Copy2_Click(object sender, RoutedEventArgs e)
-        {
-            textB2.Clear();
-        }
-
-        private void button_Copy3_Click(object sender, RoutedEventArgs e)
-        {
-            textB1.Clear();
         }
 
         private void modifié_Click(object sender, RoutedEventArgs e)
@@ -57,16 +56,23 @@ namespace LiquidVassel
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            text1.Clear();
-            text2.Clear();
-            text3.Clear();
-            textB2.Clear();
-            textB1.Clear();
+
+            Idmatricule.Clear();
+            Tireaux.Clear();
+            LongeurBateaux.Clear();
+            NombreEquipages.Clear();
             textnom.Clear();
+            IDdeCapitaine.Clear();
+            Categorie.Clear();
+            idqPays.Clear();
+            idarmateur.Clear();
+            idrotation.Clear();
+            LargeurBateu.Clear();
+
         }
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-         
+
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -74,7 +80,78 @@ namespace LiquidVassel
             MessageBox.Show("vous aller ajouter une tournée");
         }
 
-       
+        private void Pavillon_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void ajoutertourner_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("vous aller ajouter une tourné");
+            AjouteruneTourner aj = new AjouteruneTourner();
+            aj.Show();
+
+
+
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+                using (var vm = new VesselModel())
+                {
+
+                    Bateau bat = new Bateau();
+
+                    bat.IDmat = Idmatricule.Text;
+                    bat.nameVsl = textnom.Text;
+                    bat.IDcapitaine = IDdeCapitaine.Text;
+                    bat.cat = Categorie.Text;
+                    bat.IdPays = idqPays.Text;
+                    bat.Idarma = idarmateur.Text;
+                    bat.longVsl = int.Parse(LongeurBateaux.Text);
+                    bat.tirEau = int.Parse(Tireaux.Text);
+                    bat.largVsl = int.Parse(LargeurBateu.Text);
+                    bat.nbreEquipage = int.Parse(NombreEquipages.Text);
+                    bat.IDcapitaine = IDdeCapitaine.Text;
+                    bat.IdRota = idrotation.Text;
+
+                    vm.Bateaux.Add(bat);
+                    vm.SaveChanges();
+
+                    MessageBox.Show("BATEAU ajouter avec succé");
+                }
+
+            }
+            catch (OverflowException j)
+            {
+                MessageBox.Show(j.Message);
+            }
+            catch (ArgumentNullException k)
+            {
+                MessageBox.Show(k.Message);
+            }
+
+            catch (FormatException l)
+            {
+                MessageBox.Show(l.Message);
+            }
+            catch (Exception d)
+            {
+                MessageBox.Show(d.Message);
+            }
+
+
+
+        }
+
+
+        private void LargeurBateu_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 
 

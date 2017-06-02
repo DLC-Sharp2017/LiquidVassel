@@ -80,6 +80,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AjouteruneTourner.xaml.cs">
+      <DependentUpon>AjouteruneTourner.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowTournee.xaml.cs">
       <DependentUpon>WindowTournee.xaml</DependentUpon>
     </Compile>
@@ -114,6 +117,10 @@
     <Compile Include="VueDashboard.xaml.cs">
       <DependentUpon>VueDashboard.xaml</DependentUpon>
     </Compile>
+    <Page Include="AjouteruneTourner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

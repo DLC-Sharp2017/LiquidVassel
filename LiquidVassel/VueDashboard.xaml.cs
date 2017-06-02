@@ -33,7 +33,7 @@ namespace LiquidVassel
 
                 for (int i = 0; i < navirArma.Count; i++)
                 {
-                    navirArma.
+                    
                 }
                 
                 
