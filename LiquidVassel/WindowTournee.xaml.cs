@@ -122,6 +122,53 @@ namespace LiquidVassel
                     spanelDate.Children.Add(listTextBlockDated[i]);
                 }
 
+
+                //ZONE DE TEST
+
+                string idrota = "MED";
+                string test_portdep = "EGALY";
+                string test_portarriv = "ITGIT";
+                string datedep = "01/01/2001";
+                DateTime test_datedep = DateTime.Parse(datedep);
+                DateTime test_dateest = test_datedep;
+
+                // Insertion d'un port de séquence via SQL
+                try
+                {
+                    vm.Database.ExecuteSqlCommand("INSERT INTO `VLS`.`sequence`(`dateDepart`,`dateEstimee`,`dateReelle`,`IdRota`,`codePortDep`,`codePortArr`) VALUES ({0},{1},{2},{3},{4},{5})", test_datedep, test_dateest, test_dateest, idrota, test_portdep, test_portarriv);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.InnerException);
+                }
+
+                // Suppression d'un port de séquence via Entity
+                try
+                {
+                    sequence seq = (sequence)from x in vm.sequences where x.codePortDep == "EGALY" & x.codePortArr=="ITGIT" select x;
+                    vm.sequences.Remove(seq);
+                    vm.SaveChanges();
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.InnerException);
+                }
+
+                // Maj du port
+                try
+                {
+                    sequence seq = (sequence)from x in vm.sequences where x.codePortDep == "EGALY" & x.codePortArr == "ITGIT" select x;
+                    seq.codePortArr = "ITGIT";
+                    seq.codePortDep = "EGALY";
+                    vm.SaveChanges();
+                    MessageBox.Show("Mise à jour réussie.");
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.InnerException);
+                }
+
             }
 
         }
@@ -130,7 +177,22 @@ namespace LiquidVassel
         {
 
             Window inputPort = new Window();
-            
+
+            string idrota = "MED";
+            string test_portdep = "test";
+            string test_portarriv = "test";
+            string datedep = "01/01/2001/";
+            DateTime test_datedep = DateTime.Parse(datedep);
+            DateTime test_dateest = test_datedep;
+
+            using (var vm = new VesselModel())
+            {
+                //var query = "insert into vm.sequences((`dateDepart`,`dateEstimee`,`dateReelle`,`IdRota`,`codePortDep`,`codePortArr`) Values ("
+
+                vm.Database.ExecuteSqlCommand(@"INSERT INTO `VLS`.`sequence`(`dateDepart`,`dateEstimee`,`IdRota`,`codePortDep`,`codePortArr`) VALUES ({0},{1},{2},{3})", test_datedep, test_dateest, idrota, test_portdep, test_portarriv);
+       
+
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

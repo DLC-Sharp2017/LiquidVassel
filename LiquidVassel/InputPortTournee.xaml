@@ -1,0 +1,41 @@
+﻿<Window x:Class="LiquidVassel.InputPortTournee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LiquidVassel"
+        mc:Ignorable="d"
+        Title="Ajouter un port" Height="419.319" Width="373.295">
+    <Grid Margin="15,15,15,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="59" />
+            <RowDefinition Height="Auto" MinHeight="60"/>
+            <RowDefinition Height="Auto" MinHeight="60"/>
+            <RowDefinition Height="Auto" MinHeight="60" />
+            <RowDefinition Height="Auto" MinHeight="60"/>
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+
+
+
+
+        <WrapPanel Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0" Width="0"/>
+        <Button IsDefault="True" x:Name="btnDialogOk" Click="btnDialogOk_Click" MinWidth="60" Margin="10,0,192,0" Content="_Ok" Grid.ColumnSpan="2" Grid.Row="5"/>
+        <Button IsCancel="True" MinWidth="60" Content="_Cancel" Grid.Column="1" Margin="189,60,10,1" Grid.Row="4" Grid.RowSpan="2" Click="Button_Click"/>
+        <Label x:Name="label_codeport" Content="Code Port Depart" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="26" Margin="96,0,0,0"/>
+        <TextBox x:Name="textBox_portdep" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="96,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label_datest" Content="Date Estimée" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="26" Margin="96,0,0,0" Grid.Row="2"/>
+        <TextBox x:Name="textBox_datest" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="96,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Row="2"/>
+        <Label x:Name="label_datedep" Content="Date Départ" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="26" Margin="96,0,0,0" Grid.Row="1"/>
+        <TextBox x:Name="textBox_datedep" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="96,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <Label x:Name="label_datereel" Content="Date Réelle" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="26" Margin="96,0,0,0" Grid.Row="3"/>
+        <TextBox x:Name="textBox_datereel" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="96,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Row="3"/>
+        <Label x:Name="label_Copy3" Content="Code Port Arrivée" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="26" Margin="96,0,0,0" Grid.Row="4"/>
+        <TextBox x:Name="textBox_codearriv" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="96,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Row="4"/>
+    </Grid>
+</Window>
+
