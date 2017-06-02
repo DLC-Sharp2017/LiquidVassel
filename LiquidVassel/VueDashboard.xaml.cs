@@ -23,21 +23,6 @@ namespace LiquidVassel
         {
             InitializeComponent();
             myMap.Center = new Microsoft.Maps.MapControl.WPF.Location(57.262158, 6.741457);
-
-            using (var navire = new VesselModel())
-            {
-                var navirArma = (from arnav in navire.Armateurs
-                                 join navar in navire.Bateaux
-                                 on arnav.Idarma equals navar.IDmat
-                                 select arnav).ToList();
-
-                for (int i = 0; i < navirArma.Count; i++)
-                {
-                    navirArma.
-                }
-                
-                
-            }
         }
 
         private void StackPanel_MouseUpBatBat(object sender, MouseButtonEventArgs e)
@@ -53,7 +38,6 @@ namespace LiquidVassel
         {
             MessageBox.Show("Tournée");
         }
-
 
 
         //private void StackPanel_MouseUp(object sender, MouseButtonEventArgs e)
